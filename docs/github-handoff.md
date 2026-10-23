@@ -14,6 +14,6 @@ Acceptance checks:
 
 Results before push: scanned 198 project files; no credential pattern matches or files above 25 MiB. Margins builder passed: 33 release files, 49 local references, ZIP SHA256 `1c5ac5c38d4d1eefdd3797f04a4b371227fffadfd2e89c740a2a67044a3429bb`.
 
-Current commit: the commit containing this handoff record (resolve with `git log -1 -- docs/github-handoff.md`).
-Status: prepared for initial push; final remote verification is reported in the chat.
-Next action: create the private destination, push the import commit as `main`, and verify its SHA and visibility. Website hosting remains separate.
+Import commit: `2de7bf5bce33e24c98177c1d0e858a3084d08244`; local and GitHub `main` SHAs matched after the initial push. This completion record follows in a documentation-only commit.
+Status: complete. GitHub confirms private visibility, standalone repository, and default branch `main`. `origin` points to the user's repository; `upstream` points to Sackmann's source. The local `codex/github-project-import` branch tracks `origin/main`. All 169 pre-existing upstream deletions remain unstaged; the remote retains those original files. No generated models or processed state were uploaded. The import preserves existing source formatting, including pre-existing whitespace warnings.
+Next action: deploy the Margins static release to the chosen host. No GitHub backup blocker remains; website hosting remains separate.
