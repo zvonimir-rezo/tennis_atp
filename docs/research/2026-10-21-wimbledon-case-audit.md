@@ -1,0 +1,36 @@
+# Wimbledon 2019: bounded case audit
+
+2026-10-21. Scope: one authored historical Margins investigation for statistically minded tennis followers who already know this final. No production build or additional direction. Sources were retrieved; published analyses below were not independently reproduced unless stated.
+
+## Verdict
+
+**The final supports a challengeable investigation, but the familiar totals, three tiebreaks, second-set surplus and even leverage adjustment are already published.** Distinction must come from what the reader can inspect and argue about, plus composition and motion. There is no evidence yet of a new statistical discovery or expert appeal. A dramatic replay of 218–204 alone does not clear this audience's bar.
+
+A defensible provisional editorial claim is: **Federer's point advantage was concentrated; Djokovic's tiebreak advantage was decisive, but that is narrower than proving universal superiority under pressure.** The first two clauses are descriptive and reproducible from point records. The last challenges an inference, not Djokovic's legitimate victory or his own account of the experience.
+
+## What was already said
+
+| Source | Established prior treatment | Consequence |
+|---|---|---|
+| [Tennis Abstract detailed report](https://www.tennisabstract.com/charting/20190714-M-Wimbledon-F-Roger_Federer-Novak_Djokovic.html), charted by Zindaras | Point descriptions, key points, rally-length/serve/return/net/shot breakdowns are already available. | A new table or full point list is not differentiation. Use the original record as inspectable evidence. |
+| [Sackmann, July 26, 2019](https://www.tennisabstract.com/blog/2019/07/26/roger-federer-wasnt-clutch-but-he-was-almost-clutch-enough/) | Quantifies point importance: average leverage of Djokovic's points won 7.9%, Federer's 7.2%; Djokovic LR 1.10, balanced LR 1.11, DR .87 and leverage-adjusted DR .97. In his then-charted sample of 167 men's major finals, this was the only champion below 1.0 on the adjusted measure. He argues Federer's overall high-leverage performance was less poor than famous failures suggest. | “Even after accounting for important points” is already an analytical argument. These are author/model/sample-specific values, not verified modern universal rankings. Credit the analysis and disclose assumptions before reuse. |
+| [Bob Schewior, July 17, 2019](https://www.deconstructingtennis.com/blog/wimbledon-mens-final-analysis-2019/) | His own added commentary explicitly notes that removing set two leaves 192 points apiece. The page also reproduces Craig O'Shannessy's contemporary Brain Game analysis: tiebreak baseline exchanges, fewer Federer net approaches, longer rallies. It records disagreement about who dictated that pattern. | The second-set reveal is not new. “Djokovic forced it” versus “Federer became conservative” is already contested. Do not choose a causal answer from counts. Original ATP Brain Game page was not recovered; this mixed reproduction/commentary is primary evidence of Schewior's argument, not independent verification of every reproduced tactical statistic. |
+| [Ekta Khanchandani's March 2020 visual essay](https://medium.com/nightingale/why-the-2019-wimbledon-mens-final-is-one-to-be-remembered-175549d2109a) | A previous authored data-visualization treatment of this exact final exists; its accessible opening foregrounds 218–204. | No “first visual anatomy” claim. Only the opening was accessible behind the member gate, so its full interaction/composition was not assessed. |
+
+## Contemporary direct evidence and disagreement
+
+The [ITF's July 14 report](https://www.itftennis.com/en/news-and-media/articles/djokovic-beats-federer-in-epic-wimbledon-final/) confirms the result, two championship points at 8–7, and Federer's 14-point advantage. It records Djokovic's description of exceptional mental demands and his statement that his return was below his expectations except at key moments. It also records Federer describing an opportunity missed. **These establish participant self-reports; they do not identify the cause of individual errors.**
+
+[Steve Tignor's next-day close reading](https://www.tennis.com/news/articles/the-day-after-how-djokovic-and-federer-played-the-crucial-points) describes both men's lost opportunities before and after 8–7. It is useful attributed observation; its interpretation of nerves and cautious shots is not a fact encoded in MCP. A shot-code narrative should distinguish the recorded outcome from the journalist's explanation.
+
+Djokovic's [own contemporaneous site](https://novakdjokovic.com/en/news/tennis/novak-beats-roger-in-epic-wins-fifth-wimbledon-crown/) reports 203–218 rather than 204–218. It also differs on Federer unforced errors from some reports. Preserve that discrepancy in provenance; use the complete verified sequence and corroborating source for displayed totals. First-party publication alone does not guarantee an accurate count.
+
+A contemporary [fan statistics discussion](https://www.reddit.com/r/tennis/comments/cgaiki) already invokes 11 Federer tiebreak unforced errors to Djokovic's zero. That establishes familiarity with the claim, not its correctness. The number needs recoding/cross-checking before use; UFE classification is a charting judgment. Later forum recollections even misstate the final tiebreak rule. The [official 2019 completed schedule](https://www.wimbledon.com/en_GB/scores/2019/schedule/pdf/schedulePDF21.pdf) confirms the 7–3 final breaker after 12–12; do not apply today's format retrospectively.
+
+## The useful experiment within this case
+
+A compact signed decomposition could let an expert test the editorial claim by selecting set two, the 33 tiebreak points, and the remaining points while preserving each point's identity. Independently checked against `reports/discovery/wimbledon2019-final-points.json`: 422 points, Federer 218–204; set two 26–12 (+14), other non-tiebreak points 180–171 (+9), all tiebreaks 12–21 (−9). The other four sets total 192–192. Tiebreak classification must use 12–12 in set five, 6–6 in other sets. These are descriptive partitions, not points that can be removed from history without changing later play.
+
+The deeper payoff should be an explicit distinction between *where the outcome was decided* and *what the match proves about the players*. Let users open the opposing argument and the exact records. Do not label a uniform tiebreak subset “all important points.” Match points, break points and ordinary points can carry different score-dependent leverage. A modeled importance layer needs stated serve probabilities, scoring rules and sensitivity; the present ATP pre-match model supplies none of that automatically.
+
+Reject this case as the finished specimen if informed readers merely say “three tiebreaks, obviously” after the full reveal. A cheap gate: three experts who know the result inspect one static decomposition and an opposing claim without coaching. Require each to identify the precise evidence for the verdict and one legitimate limitation; at least two should voluntarily inspect a point/group or revise a specific prior account. Record what changed, not whether they liked the styling. No such participant test has happened.

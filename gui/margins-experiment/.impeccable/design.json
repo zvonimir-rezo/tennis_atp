@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T21:19:25.253176+00:00",
+  "title": "Design System: Margins — The anatomy of almost",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Ivory",
+        "tonalRamp": [
+          "oklch(15% 0.0165 91.56)",
+          "oklch(26% 0.0165 91.56)",
+          "oklch(38% 0.0165 91.56)",
+          "oklch(49% 0.0165 91.56)",
+          "oklch(61% 0.0165 91.56)",
+          "oklch(72% 0.0165 91.56)",
+          "oklch(84% 0.0165 91.56)",
+          "oklch(95% 0.0165 91.56)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Court Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0479 169.39)",
+          "oklch(26% 0.0479 169.39)",
+          "oklch(38% 0.0479 169.39)",
+          "oklch(49% 0.0479 169.39)",
+          "oklch(61% 0.0479 169.39)",
+          "oklch(72% 0.0479 169.39)",
+          "oklch(84% 0.0479 169.39)",
+          "oklch(95% 0.0479 169.39)"
+        ]
+      },
+      "plum": {
+        "role": "secondary",
+        "displayName": "Opponent Plum",
+        "tonalRamp": [
+          "oklch(15% 0.0843 348.62)",
+          "oklch(26% 0.0843 348.62)",
+          "oklch(38% 0.0843 348.62)",
+          "oklch(49% 0.0843 348.62)",
+          "oklch(61% 0.0843 348.62)",
+          "oklch(72% 0.0843 348.62)",
+          "oklch(84% 0.0843 348.62)",
+          "oklch(95% 0.0843 348.62)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Green Grey",
+        "tonalRamp": [
+          "oklch(15% 0.0215 155.28)",
+          "oklch(26% 0.0215 155.28)",
+          "oklch(38% 0.0215 155.28)",
+          "oklch(49% 0.0215 155.28)",
+          "oklch(61% 0.0215 155.28)",
+          "oklch(72% 0.0215 155.28)",
+          "oklch(84% 0.0215 155.28)",
+          "oklch(95% 0.0215 155.28)"
+        ]
+      },
+      "filter-bg": {
+        "role": "neutral",
+        "displayName": "Quiet Filter",
+        "tonalRamp": [
+          "oklch(15% 0.0228 109.58)",
+          "oklch(26% 0.0228 109.58)",
+          "oklch(38% 0.0228 109.58)",
+          "oklch(49% 0.0228 109.58)",
+          "oklch(61% 0.0228 109.58)",
+          "oklch(72% 0.0228 109.58)",
+          "oklch(84% 0.0228 109.58)",
+          "oklch(95% 0.0228 109.58)"
+        ]
+      },
+      "filter-hover": {
+        "role": "neutral",
+        "displayName": "Filter Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0331 118.51)",
+          "oklch(26% 0.0331 118.51)",
+          "oklch(38% 0.0331 118.51)",
+          "oklch(49% 0.0331 118.51)",
+          "oklch(61% 0.0331 118.51)",
+          "oklch(72% 0.0331 118.51)",
+          "oklch(84% 0.0331 118.51)",
+          "oklch(95% 0.0331 118.51)"
+        ]
+      },
+      "filter-selected-hover": {
+        "role": "neutral",
+        "displayName": "Selected Filter Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0549 166.75)",
+          "oklch(26% 0.0549 166.75)",
+          "oklch(38% 0.0549 166.75)",
+          "oklch(49% 0.0549 166.75)",
+          "oklch(61% 0.0549 166.75)",
+          "oklch(72% 0.0549 166.75)",
+          "oklch(84% 0.0549 166.75)",
+          "oklch(95% 0.0549 166.75)"
+        ]
+      },
+      "source-bg": {
+        "role": "neutral",
+        "displayName": "Source Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0214 106.82)",
+          "oklch(26% 0.0214 106.82)",
+          "oklch(38% 0.0214 106.82)",
+          "oklch(49% 0.0214 106.82)",
+          "oklch(61% 0.0214 106.82)",
+          "oklch(72% 0.0214 106.82)",
+          "oklch(84% 0.0214 106.82)",
+          "oklch(95% 0.0214 106.82)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Oversized editorial serif",
+        "purpose": "Local Instrument Serif Regular and Italic; responsive variants are documented in DESIGN.md."
+      },
+      "body": {
+        "displayName": "Plain evidence text",
+        "purpose": "Arial/Helvetica carries controls, samples and source definitions."
+      }
+    },
+    "shadows": [
+      {
+        "name": "floor",
+        "value": "background:#2a372e; filter:blur(18px)",
+        "purpose": "Structural object shadow; scroll controls opacity and pose. Phone blur:15px."
+      },
+      {
+        "name": "turf-inset",
+        "value": "inset 0 0 24px #153c2625",
+        "purpose": "Court material edge depth."
+      }
+    ],
+    "motion": [
+      {
+        "name": "direct-scroll",
+        "value": "requestAnimationFrame + t²(3−2t)",
+        "purpose": "Event-driven paint of continuous reversible scroll position; no timer or WAAPI."
+      },
+      {
+        "name": "chapter-stops",
+        "value": "0, .38, .61, .86, 1",
+        "purpose": "Immediate chapter landing, not animated scrolling."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0 spatial travel",
+        "purpose": "Static evidence chapters with scene hidden and section collapsed."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet-max",
+        "value": "1050px"
+      },
+      {
+        "name": "phone-max",
+        "value": "760px"
+      },
+      {
+        "name": "short-phone-max-height",
+        "value": "739px"
+      },
+      {
+        "name": "smallest-phone-max-height",
+        "value": "649px"
+      },
+      {
+        "name": "short-desktop-max-height",
+        "value": "720px"
+      }
+    ],
+    "focus": {
+      "value": "2px solid var(--plum); outline-offset:5px",
+      "purpose": "Immediate focus indication."
+    },
+    "provenance": {
+      "sourceFiles": [
+        "index.html",
+        "style.css",
+        "court.js",
+        "evidence.js",
+        "REDESIGN.md"
+      ],
+      "material": "assets/grass-turf.webp",
+      "prompt": "assets/grass-turf.webp.json",
+      "note": "Tonal ramps are synthesized panel previews, not additional runtime color tokens. CSS source remains authoritative."
+    }
+  },
+  "components": [
+    {
+      "name": "Quiet text action",
+      "kind": "button",
+      "refersTo": "text-action",
+      "description": "Immediate motion preference or point shortcut action.",
+      "html": "<button class=\"ds-text\">Reduce motion</button>",
+      "css": ".ds-text{font:12px Arial,Helvetica,sans-serif;min-height:44px;border:0;background:none;color:var(--ink,#173c30);padding:0;text-decoration:underline;text-underline-offset:4px;cursor:pointer}.ds-text:focus-visible{outline:2px solid var(--plum,#5d2945);outline-offset:5px}.ds-text:hover{color:var(--plum,#5d2945)}.ds-text:disabled{opacity:.4;cursor:default}"
+    },
+    {
+      "name": "Subset filters",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Flat rectangular membership controls, with an inverted selected state.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Inspect a subset\"><button aria-pressed=\"true\">All 422</button><button aria-pressed=\"false\">Set two</button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:8px}.ds-filters button{font:14px Arial,Helvetica,sans-serif;color:var(--ink,#173c30);min-height:44px;border:0;border-radius:0;background:var(--filter-bg,#dedfce);padding:10px 15px;cursor:pointer}.ds-filters button[aria-pressed=true]{background:var(--ink,#173c30);color:var(--paper,#eeeade)}.ds-filters button:focus-visible{outline:2px solid var(--plum,#5d2945);outline-offset:5px}.ds-filters button:hover{background:var(--filter-hover,#ced4bc)}.ds-filters button[aria-pressed=true]:hover{background:var(--filter-selected-hover,#285242)}"
+    },
+    {
+      "name": "Point field",
+      "kind": "input",
+      "refersTo": "point-input",
+      "description": "Exact ID access with an open field and bottom rule.",
+      "html": "<label class=\"ds-point\">Point <input type=\"number\" min=\"1\" max=\"422\" value=\"359\" inputmode=\"numeric\"></label>",
+      "css": ".ds-point{display:flex;align-items:center;gap:10px;font:14px Arial,Helvetica,sans-serif;color:var(--ink,#173c30)}.ds-point input{font:inherit;font-variant-numeric:tabular-nums;width:72px;min-height:44px;padding:7px;color:inherit;background:transparent;border:0;border-bottom:1px solid var(--ink,#173c30);border-radius:0}.ds-point input:focus-visible{outline:2px solid var(--plum,#5d2945);outline-offset:5px}"
+    },
+    {
+      "name": "Chapter track",
+      "kind": "nav",
+      "description": "Five quiet chapter positions; the current position gains a plum line.",
+      "html": "<nav class=\"ds-track\" aria-label=\"Investigation chapters\"><button aria-label=\"The whole match\"><i></i></button><button aria-label=\"The five sets\" aria-current=\"step\"><i></i></button><button aria-label=\"The concentrated margin\"><i></i></button><button aria-label=\"The opposing margins\"><i></i></button><button aria-label=\"The bounded verdict\"><i></i></button></nav>",
+      "css": ".ds-track{display:flex;flex-direction:column;gap:0;width:44px}.ds-track button{display:flex;align-items:center;justify-content:center;min-height:44px;background:none;border:0;padding:0 8px;cursor:pointer}.ds-track i{height:4px;width:4px;border-radius:50%;background:#a1ab94}.ds-track [aria-current] i{height:22px;border-radius:0;background:var(--plum,#5d2945)}.ds-track button:focus-visible{outline:2px solid var(--plum,#5d2945);outline-offset:5px}.ds-track button:hover i{background:var(--plum,#5d2945)}"
+    },
+    {
+      "name": "Named point group",
+      "kind": "custom",
+      "description": "A static specimen of the held set-two label; no controller is simulated.",
+      "html": "<div class=\"ds-group\"><button>Set two</button><span class=\"ds-sample\">38/422 points</span><span class=\"ds-margin\">+14</span><div class=\"ds-counts\"><span>F <b>26</b></span><span>D <b>12</b></span></div></div>",
+      "css": ".ds-group{font-family:Arial,Helvetica,sans-serif;color:var(--ink,#173c30)}.ds-group button{font:15px Arial,Helvetica,sans-serif;color:inherit;min-height:30px;border:0;background:none;padding:0;text-decoration:underline;text-decoration-color:#8b9a7a;text-underline-offset:5px;cursor:pointer}.ds-sample{display:block;font-size:12px;color:var(--muted,#536057)}.ds-margin{display:block;font:400 56px/.9 Instrument,Georgia,serif;letter-spacing:-.035em;margin-top:8px}.ds-counts{display:flex;gap:18px;font-size:13px;margin-top:8px}.ds-counts b{font-weight:400;font-variant-numeric:tabular-nums}.ds-counts span:nth-child(2){color:var(--plum,#5d2945)}.ds-group button:focus-visible{outline:2px solid var(--plum,#5d2945);outline-offset:5px}.ds-group button:hover{color:var(--plum,#5d2945)}"
+    },
+    {
+      "name": "Inspection link",
+      "kind": "button",
+      "description": "An editorial link carries the reader from the verdict into inspectable records.",
+      "html": "<a class=\"ds-inspect\" href=\"#inspection\">Challenge the argument <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-7 7 7-7 7\"/></svg></a>",
+      "css": ".ds-inspect{display:flex;align-items:center;gap:40px;width:fit-content;color:var(--paper,#eeeade);font:16px Arial,Helvetica,sans-serif;text-decoration:none;border-bottom:1px solid #b5c6ad;padding:0 0 12px;background:var(--ink,#173c30)}.ds-inspect svg{width:22px;fill:none;stroke:currentColor;stroke-width:1.4}.ds-inspect:focus-visible{outline:2px solid var(--plum,#5d2945);outline-offset:5px}.ds-inspect:hover{border-bottom-color:currentColor}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The anatomy of almost",
+    "overview": "The approved world is a sculptural grass court suspended over warm ivory: raking light, deep shadow and oversized editorial type. One continuous object separates into five categorical set sections, then yields to the exact point record. The metaphor supplies material and continuity; the persistent marks supply evidence.\n\nThis visual system applies only to the disposable historical study in this folder. The user-approved replacement in [REDESIGN.md](REDESIGN.md) supersedes the earlier dark ledger identity. Its dramatic sports editorial voice serves the bounded investigation in [PRODUCT.md](PRODUCT.md): an authored claim readers can inspect and challenge.",
+    "keyCharacteristics": [
+      "A material court over warm ivory, with thin chalk geometry and structural shadow.",
+      "Instrument Serif at sporting scale, paired with plain supporting text.",
+      "Dark green Federer circles and plum Djokovic squares with persistent record identity.",
+      "Continuous, reversible scroll; immediate inspection; static reduced-motion chapters."
+    ],
+    "rules": [
+      {
+        "name": "The Stable Identity Rule",
+        "body": "Federer stays dark green and circular; Djokovic stays plum and square. Names and shapes accompany color in every evidence arrangement.",
+        "section": "colors"
+      },
+      {
+        "name": "The Symbolic Court Rule",
+        "body": "Equal court sections name sets. Their area never encodes point totals, elapsed time or shot locations.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Equal Unit Rule",
+        "body": "One persistent keyed mark equals one recorded point. Arrangement changes coordinates, never winner, identity, equal mark area or the denominator of 422.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the approved ivory, turf, raking-light and deep-shadow world.",
+      "**Do** keep exact totals, subset denominators and the strongest objection inspectable.",
+      "**Do** hold set two in place while the other four sets divide into opposing −9 and +9 margins.",
+      "**Do** treat screenshots as captured page frames; state viewport measurements separately and exclude browser chrome from the image frame.",
+      "**Do** use the static chapter path for system or explicit reduced motion."
+    ],
+    "donts": [
+      "**Don't** restore the superseded dark ledger, acid accent or compressed Barlow headline identity.",
+      "**Don't** mistake the illustrative court or generated grass for match evidence.",
+      "**Don't** add invented trajectories, elapsed clocks, count-ups or interpolated evidence totals.",
+      "**Don't** infer psychology, deservedness or a match without set two.",
+      "**Don't** treat browser assertions or a scoped finish review as proof of demand, reader learning or physical-phone performance."
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Margins · scroll profile</title>
+<style>body{margin:0;background:#ede7d8;font:14px Arial}iframe{border:0;position:fixed;inset:0;width:100%;height:100%}aside{position:fixed;z-index:99;right:0;bottom:0;background:#fff;padding:8px;max-width:90vw}pre{display:none;max-height:70vh;overflow:auto;font-size:11px}body.done pre{display:block}button,select{font:inherit;min-height:32px}</style>
+<iframe title="Actual Margins artwork"></iframe><aside><select id="variant"><option value="live">Live</option><option value="baseline">Frozen baseline</option></select> <button id="run">Profile round trip</button> <button id="compare">Compare three paired runs</button><pre id="result">Ready</pre></aside>
+<script>
+// Debug-only, visible same-origin specimen. No instrumentation ships in court.js.
+// Timing and mutation counting run in separate sweeps; never compare observer overhead.
+const frame=document.querySelector('iframe'),out=document.querySelector('#result'),wait=ms=>new Promise(r=>setTimeout(r,ms));
+const percentile=(xs,p)=>{const a=[...xs].sort((a,b)=>a-b);return +(a[Math.floor((a.length-1)*p)]||0).toFixed(2)};
+async function load(variant){
+ const html=await(await fetch('../index.html',{cache:'no-store'})).text();
+ const original=await(await fetch(variant==='live'?'../court.js':'../.impeccable/performance/baseline-court.js',{cache:'no-store'})).text();
+ const digest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(original)))].map(n=>n.toString(16).padStart(2,'0')).join('');
+ const source=original.replace('function paint(){','function paint(){const __profileStart=performance.now();').replace(' updateHalo();\n}', ' updateHalo();window.__paintSamples?.push(performance.now()-__profileStart);\n}');
+ const blob=URL.createObjectURL(new Blob([source],{type:'text/javascript'}));
+ const ready=new Promise(r=>frame.onload=r);
+ frame.srcdoc=html.replace('<head>','<head><base href="'+new URL('../',location.href)+'">').replace(/<script src="court\.js[^"]*" defer><\/script>/,'<script defer src="'+blob+'"></'+'script>');
+ await ready;await frame.contentDocument.fonts.ready;await wait(250);URL.revokeObjectURL(blob);
+ if(frame.contentDocument.querySelectorAll('.point').length!==422)throw Error('Renderer did not initialize all422records');
+ return digest;
+}
+async function measure(variant){
+ const sha256=await load(variant),w=frame.contentWindow,d=frame.contentDocument;
+ const section=d.querySelector('#sequence'),stage=d.querySelector('#theatre'),start=w.scrollY+section.getBoundingClientRect().top,travel=section.offsetHeight-stage.clientHeight;
+ const intervals=[],frames=[];
+ async function sweep(duration,record){let begin,lastTime;await new Promise(resolve=>{function tick(t){begin??=t;const f=Math.min(1,(t-begin)/duration),p=f<.5?f*2:2-f*2;if(record&&lastTime!==undefined){intervals.push(t-lastTime);frames.push({p,ms:t-lastTime});}lastTime=t;w.scrollTo({top:start+travel*p,behavior:'instant'});f<1?w.requestAnimationFrame(tick):w.requestAnimationFrame(resolve);}w.requestAnimationFrame(tick);});}
+ // Warm rasterization/font caches. No polling, screenshots, MutationObserver or geometry reads during timed playback.
+ await sweep(1200,false);await wait(100);w.__paintSamples=[];
+ await sweep(4000,true);await wait(50);
+ const paints=w.__paintSamples;w.__paintSamples=undefined;
+ const mutations={attributes:0,childList:0,pointStyle:0,cue:0,nativePointTranslations:0};
+ const observer=new w.MutationObserver(entries=>{for(const e of entries){mutations[e.type]++;if(e.target.matches?.('.point'))mutations.pointStyle++;if(e.target.id==='scroll-cue')mutations.cue++;}});
+ const native=w.SVGTransform.prototype.setTranslate;
+ w.SVGTransform.prototype.setTranslate=function(...args){mutations.nativePointTranslations++;return native.apply(this,args);};
+ try{observer.observe(stage,{subtree:true,attributes:true,childList:true});await sweep(2200,false);await wait(50);}finally{observer.disconnect();w.SVGTransform.prototype.setTranslate=native;}
+ const missed=intervals.filter(t=>t>25).length;
+ const enoughSamples=intervals.length>=180&&paints.length>=150;
+ return {variant,sha256,viewport:[w.innerWidth,w.innerHeight],clientWidth:d.documentElement.clientWidth,userAgent:w.navigator.userAgent,duration:4000,observerDuringTiming:false,samples:intervals.length,p95:percentile(intervals,.95),max:percentile(intervals,1),over25ms:missed,over25percent:+(100*missed/intervals.length).toFixed(2),paintSamples:paints.length,paintP95:percentile(paints,.95),paintMax:percentile(paints,1),mutations,slowPhases:[0,1,2,3,4].map(phase=>{const a=frames.filter(f=>(f.p<.2?0:f.p<.46?1:f.p<.73?2:f.p<.96?3:4)===phase);return{phase,n:a.length,p95:percentile(a.map(f=>f.ms),.95)}}),enoughSamples,frameBudgetMet:enoughSamples&&missed/intervals.length<=.05&&percentile(intervals,.95)<=20,callbackHeadroomMet:enoughSamples&&percentile(paints,.95)<=2,pass:enoughSamples&&missed/intervals.length<=.05&&percentile(intervals,.95)<=20&&percentile(paints,.95)<=2};
+}
+async function run(paired){document.body.classList.remove('done');const buttons=[...document.querySelectorAll('button')];buttons.forEach(b=>b.disabled=true);const results=[];try{const variants=paired?['baseline','live','live','baseline','baseline','live']:[document.querySelector('#variant').value];for(const variant of variants){out.textContent='Running '+variant+' '+(results.length+1)+'/'+variants.length;results.push(await measure(variant));}const evaluated=paired?results.filter(r=>r.variant==='live'):results,pass=evaluated.every(r=>r.pass);out.textContent=JSON.stringify({pass,results},null,2);document.title=(pass?'PASS':'FAIL')+' · Margins scroll profile';}catch(e){out.textContent=e.stack;document.title='ERROR · Margins scroll profile';}document.body.classList.add('done');buttons.forEach(b=>b.disabled=false);}
+document.querySelector('#run').onclick=()=>run(false);document.querySelector('#compare').onclick=()=>run(true);
+</script></html>

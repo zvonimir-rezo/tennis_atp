@@ -1,0 +1,760 @@
+PASS Frozen original records: all IDs, winners, sets and tiebreak flags match independent oracle
+PASS Independent original-source totals all
+PASS Independent exact membership all
+PASS Independent original-source totals set2
+PASS Independent exact membership set2
+PASS Independent original-source totals tb
+PASS Independent exact membership tb
+PASS Independent original-source totals rest
+PASS Independent exact membership rest
+PASS Independent original-source totals other
+PASS Independent exact membership other
+PASS Independent original-source totals set1
+PASS Independent exact membership set1
+PASS Independent original-source totals set3
+PASS Independent exact membership set3
+PASS Independent original-source totals set4
+PASS Independent exact membership set4
+PASS Independent original-source totals set5
+PASS Independent exact membership set5
+PASS Disjoint partition covers all 422 exactly once
+PASS Filter actual controls select exact IDs all
+PASS Filter point marks preserve denominator all
+PASS Filter actual controls select exact IDs set2
+PASS Filter point marks preserve denominator set2
+PASS Filter actual controls select exact IDs tb
+PASS Filter point marks preserve denominator tb
+PASS Filter actual controls select exact IDs rest
+PASS Filter point marks preserve denominator rest
+PASS Normalized pre-point score and server 1
+PASS Original raw identity retained 1
+PASS Normalized pre-point score and server 76
+PASS Original raw identity retained 76
+PASS Normalized pre-point score and server 81
+PASS Original raw identity retained 81
+PASS Normalized pre-point score and server 87
+PASS Original raw identity retained 87
+PASS Normalized pre-point score and server 88
+PASS Original raw identity retained 88
+PASS Normalized pre-point score and server 125
+PASS Original raw identity retained 125
+PASS Normalized pre-point score and server 188
+PASS Original raw identity retained 188
+PASS Normalized pre-point score and server 198
+PASS Original raw identity retained 198
+PASS Normalized pre-point score and server 359
+PASS Original raw identity retained 359
+PASS Normalized pre-point score and server 360
+PASS Original raw identity retained 360
+PASS Normalized pre-point score and server 413
+PASS Original raw identity retained 413
+PASS Normalized pre-point score and server 422
+PASS Original raw identity retained 422
+PASS Point outside subset restores full context
+PASS Keyboard steps through selected records
+PASS Escape returns focus to point input
+PASS Invalid record ID does not change selection
+PASS Championship point restores context and truthful callout
+PASS 1440 phase 0: 422 exact persistent record IDs and winners
+PASS 1440 phase 0: five court slabs
+PASS 1440 phase 0: displayed grouping retains complete disjoint denominator
+PASS 1440 phase 0: rendered group labels match independent oracle
+PASS 1440 phase 0: all point coordinates finite — 422 coordinates
+PASS 1440 phase 0: all rendered point transforms finite
+PASS 1440 phase 0: finite progress
+PASS 1440 phase 0: all slab transforms finite
+PASS 1440 phase 0: no horizontal document overflow — 1425/1440
+PASS 1440 phase 0: all 422 point marks inside SVG — outside=0 SVG 1283×423
+PASS 1440 phase 0: distinct record marks do not overlap — overlapping pairs=0
+PASS 1440 phase 0: point marks clear count labels — colliding=0
+PASS 1440 phase 0: point marks clear all visible evidence text — colliding=0
+PASS 1440 phase 0: visible group labels fit viewport
+PASS 1440 phase 0: headline fits viewport
+PASS 1440 phase 1: 422 exact persistent record IDs and winners
+PASS 1440 phase 1: five court slabs
+PASS 1440 phase 1: displayed grouping retains complete disjoint denominator
+PASS 1440 phase 1: rendered group labels match independent oracle
+PASS 1440 phase 1: all point coordinates finite — 422 coordinates
+PASS 1440 phase 1: all rendered point transforms finite
+PASS 1440 phase 1: finite progress
+PASS 1440 phase 1: all slab transforms finite
+PASS 1440 phase 1: no horizontal document overflow — 1425/1440
+PASS 1440 phase 1: all 422 point marks inside SVG — outside=0 SVG 1283×423
+PASS 1440 phase 1: distinct record marks do not overlap — overlapping pairs=0
+PASS 1440 phase 1: point marks clear count labels — colliding=0
+PASS 1440 phase 1: point marks clear all visible evidence text — colliding=0
+PASS 1440 phase 1: visible group labels fit viewport
+PASS 1440 phase 1: headline fits viewport
+PASS 1440 phase 2: 422 exact persistent record IDs and winners
+PASS 1440 phase 2: five court slabs
+PASS 1440 phase 2: displayed grouping retains complete disjoint denominator
+PASS 1440 phase 2: rendered group labels match independent oracle
+PASS 1440 phase 2: all point coordinates finite — 422 coordinates
+PASS 1440 phase 2: all rendered point transforms finite
+PASS 1440 phase 2: finite progress
+PASS 1440 phase 2: all slab transforms finite
+PASS 1440 phase 2: no horizontal document overflow — 1425/1440
+PASS 1440 phase 2: all 422 point marks inside SVG — outside=0 SVG 1283×423
+PASS 1440 phase 2: distinct record marks do not overlap — overlapping pairs=0
+PASS 1440 phase 2: point marks clear count labels — colliding=0
+PASS 1440 phase 2: point marks clear all visible evidence text — colliding=0
+PASS 1440 phase 2: visible group labels fit viewport
+PASS 1440 phase 2: headline fits viewport
+PASS 1440 phase 3: 422 exact persistent record IDs and winners
+PASS 1440 phase 3: five court slabs
+PASS 1440 phase 3: displayed grouping retains complete disjoint denominator
+PASS 1440 phase 3: rendered group labels match independent oracle
+PASS 1440 phase 3: all point coordinates finite — 422 coordinates
+PASS 1440 phase 3: all rendered point transforms finite
+PASS 1440 phase 3: finite progress
+PASS 1440 phase 3: all slab transforms finite
+PASS 1440 phase 3: no horizontal document overflow — 1425/1440
+PASS 1440 phase 3: all 422 point marks inside SVG — outside=0 SVG 1283×423
+PASS 1440 phase 3: distinct record marks do not overlap — overlapping pairs=0
+PASS 1440 phase 3: point marks clear count labels — colliding=0
+PASS 1440 phase 3: point marks clear all visible evidence text — colliding=0
+PASS 1440 phase 3: visible group labels fit viewport
+PASS 1440 phase 3: headline fits viewport
+PASS 1440 phase 4: 422 exact persistent record IDs and winners
+PASS 1440 phase 4: five court slabs
+PASS 1440 phase 4: displayed grouping retains complete disjoint denominator
+PASS 1440 phase 4: rendered group labels match independent oracle
+PASS 1440 phase 4: all point coordinates finite — 422 coordinates
+PASS 1440 phase 4: all rendered point transforms finite
+PASS 1440 phase 4: finite progress
+PASS 1440 phase 4: all slab transforms finite
+PASS 1440 phase 4: no horizontal document overflow — 1425/1440
+PASS 1440 phase 4: all 422 point marks inside SVG — outside=0 SVG 1283×423
+PASS 1440 phase 4: distinct record marks do not overlap — overlapping pairs=0
+PASS 1440 phase 4: point marks clear count labels — colliding=0
+PASS 1440 phase 4: point marks clear all visible evidence text — colliding=0
+PASS 1440 phase 4: visible group labels fit viewport
+PASS 1440 phase 4: headline fits viewport
+PASS 1440: all 38 set-two records remain exactly stationary during complementary split
+PASS 1440 interrupted scroll: 422 exact persistent record IDs and winners
+PASS 1440 interrupted scroll: five court slabs
+PASS 1440 interrupted scroll: displayed grouping retains complete disjoint denominator
+PASS 1440 interrupted scroll: rendered group labels match independent oracle
+PASS 1440 interrupted scroll: all point coordinates finite — 422 coordinates
+PASS 1440 interrupted scroll: all rendered point transforms finite
+PASS 1440 interrupted scroll: finite progress
+PASS 1440 interrupted scroll: all slab transforms finite
+PASS 1440 interrupted scroll: no horizontal document overflow — 1425/1440
+PASS 1440: point DOM identity survives scroll and resizing
+PASS 1440: pinned record survives resize and navigation
+PASS 768 phase 0: 422 exact persistent record IDs and winners
+PASS 768 phase 0: five court slabs
+PASS 768 phase 0: displayed grouping retains complete disjoint denominator
+PASS 768 phase 0: rendered group labels match independent oracle
+PASS 768 phase 0: all point coordinates finite — 422 coordinates
+PASS 768 phase 0: all rendered point transforms finite
+PASS 768 phase 0: finite progress
+PASS 768 phase 0: all slab transforms finite
+PASS 768 phase 0: no horizontal document overflow — 753/768
+PASS 768 phase 0: all 422 point marks inside SVG — outside=0 SVG 678×423
+PASS 768 phase 0: distinct record marks do not overlap — overlapping pairs=0
+PASS 768 phase 0: point marks clear count labels — colliding=0
+PASS 768 phase 0: point marks clear all visible evidence text — colliding=0
+PASS 768 phase 0: visible group labels fit viewport
+PASS 768 phase 0: headline fits viewport
+PASS 768 phase 1: 422 exact persistent record IDs and winners
+PASS 768 phase 1: five court slabs
+PASS 768 phase 1: displayed grouping retains complete disjoint denominator
+PASS 768 phase 1: rendered group labels match independent oracle
+PASS 768 phase 1: all point coordinates finite — 422 coordinates
+PASS 768 phase 1: all rendered point transforms finite
+PASS 768 phase 1: finite progress
+PASS 768 phase 1: all slab transforms finite
+PASS 768 phase 1: no horizontal document overflow — 753/768
+PASS 768 phase 1: all 422 point marks inside SVG — outside=0 SVG 678×423
+PASS 768 phase 1: distinct record marks do not overlap — overlapping pairs=0
+PASS 768 phase 1: point marks clear count labels — colliding=0
+PASS 768 phase 1: point marks clear all visible evidence text — colliding=0
+PASS 768 phase 1: visible group labels fit viewport
+PASS 768 phase 1: headline fits viewport
+PASS 768 phase 2: 422 exact persistent record IDs and winners
+PASS 768 phase 2: five court slabs
+PASS 768 phase 2: displayed grouping retains complete disjoint denominator
+PASS 768 phase 2: rendered group labels match independent oracle
+PASS 768 phase 2: all point coordinates finite — 422 coordinates
+PASS 768 phase 2: all rendered point transforms finite
+PASS 768 phase 2: finite progress
+PASS 768 phase 2: all slab transforms finite
+PASS 768 phase 2: no horizontal document overflow — 753/768
+PASS 768 phase 2: all 422 point marks inside SVG — outside=0 SVG 678×423
+PASS 768 phase 2: distinct record marks do not overlap — overlapping pairs=0
+PASS 768 phase 2: point marks clear count labels — colliding=0
+PASS 768 phase 2: point marks clear all visible evidence text — colliding=0
+PASS 768 phase 2: visible group labels fit viewport
+PASS 768 phase 2: headline fits viewport
+PASS 768 phase 3: 422 exact persistent record IDs and winners
+PASS 768 phase 3: five court slabs
+PASS 768 phase 3: displayed grouping retains complete disjoint denominator
+PASS 768 phase 3: rendered group labels match independent oracle
+PASS 768 phase 3: all point coordinates finite — 422 coordinates
+PASS 768 phase 3: all rendered point transforms finite
+PASS 768 phase 3: finite progress
+PASS 768 phase 3: all slab transforms finite
+PASS 768 phase 3: no horizontal document overflow — 753/768
+PASS 768 phase 3: all 422 point marks inside SVG — outside=0 SVG 678×423
+PASS 768 phase 3: distinct record marks do not overlap — overlapping pairs=0
+PASS 768 phase 3: point marks clear count labels — colliding=0
+PASS 768 phase 3: point marks clear all visible evidence text — colliding=0
+PASS 768 phase 3: visible group labels fit viewport
+PASS 768 phase 3: headline fits viewport
+PASS 768 phase 4: 422 exact persistent record IDs and winners
+PASS 768 phase 4: five court slabs
+PASS 768 phase 4: displayed grouping retains complete disjoint denominator
+PASS 768 phase 4: rendered group labels match independent oracle
+PASS 768 phase 4: all point coordinates finite — 422 coordinates
+PASS 768 phase 4: all rendered point transforms finite
+PASS 768 phase 4: finite progress
+PASS 768 phase 4: all slab transforms finite
+PASS 768 phase 4: no horizontal document overflow — 753/768
+PASS 768 phase 4: all 422 point marks inside SVG — outside=0 SVG 678×423
+PASS 768 phase 4: distinct record marks do not overlap — overlapping pairs=0
+PASS 768 phase 4: point marks clear count labels — colliding=0
+PASS 768 phase 4: point marks clear all visible evidence text — colliding=0
+PASS 768 phase 4: visible group labels fit viewport
+PASS 768 phase 4: headline fits viewport
+PASS 768: all 38 set-two records remain exactly stationary during complementary split
+PASS 768 interrupted scroll: 422 exact persistent record IDs and winners
+PASS 768 interrupted scroll: five court slabs
+PASS 768 interrupted scroll: displayed grouping retains complete disjoint denominator
+PASS 768 interrupted scroll: rendered group labels match independent oracle
+PASS 768 interrupted scroll: all point coordinates finite — 422 coordinates
+PASS 768 interrupted scroll: all rendered point transforms finite
+PASS 768 interrupted scroll: finite progress
+PASS 768 interrupted scroll: all slab transforms finite
+PASS 768 interrupted scroll: no horizontal document overflow — 753/768
+PASS 768: point DOM identity survives scroll and resizing
+PASS 768: pinned record survives resize and navigation
+PASS 390 phase 0: 422 exact persistent record IDs and winners
+PASS 390 phase 0: five court slabs
+PASS 390 phase 0: displayed grouping retains complete disjoint denominator
+PASS 390 phase 0: rendered group labels match independent oracle
+PASS 390 phase 0: all point coordinates finite — 422 coordinates
+PASS 390 phase 0: all rendered point transforms finite
+PASS 390 phase 0: finite progress
+PASS 390 phase 0: all slab transforms finite
+PASS 390 phase 0: no horizontal document overflow — 375/390
+PASS 390 phase 0: all 422 point marks inside SVG — outside=0 SVG 323×414
+PASS 390 phase 0: distinct record marks do not overlap — overlapping pairs=0
+PASS 390 phase 0: point marks clear count labels — colliding=0
+PASS 390 phase 0: point marks clear all visible evidence text — colliding=0
+PASS 390 phase 0: visible group labels fit viewport
+PASS 390 phase 0: headline fits viewport
+PASS 390 phase 1: 422 exact persistent record IDs and winners
+PASS 390 phase 1: five court slabs
+PASS 390 phase 1: displayed grouping retains complete disjoint denominator
+PASS 390 phase 1: rendered group labels match independent oracle
+PASS 390 phase 1: all point coordinates finite — 422 coordinates
+PASS 390 phase 1: all rendered point transforms finite
+PASS 390 phase 1: finite progress
+PASS 390 phase 1: all slab transforms finite
+PASS 390 phase 1: no horizontal document overflow — 375/390
+PASS 390 phase 1: all 422 point marks inside SVG — outside=0 SVG 323×414
+PASS 390 phase 1: distinct record marks do not overlap — overlapping pairs=0
+PASS 390 phase 1: point marks clear count labels — colliding=0
+PASS 390 phase 1: point marks clear all visible evidence text — colliding=0
+PASS 390 phase 1: visible group labels fit viewport
+PASS 390 phase 1: headline fits viewport
+PASS 390 phase 2: 422 exact persistent record IDs and winners
+PASS 390 phase 2: five court slabs
+PASS 390 phase 2: displayed grouping retains complete disjoint denominator
+PASS 390 phase 2: rendered group labels match independent oracle
+PASS 390 phase 2: all point coordinates finite — 422 coordinates
+PASS 390 phase 2: all rendered point transforms finite
+PASS 390 phase 2: finite progress
+PASS 390 phase 2: all slab transforms finite
+PASS 390 phase 2: no horizontal document overflow — 375/390
+PASS 390 phase 2: all 422 point marks inside SVG — outside=0 SVG 323×414
+PASS 390 phase 2: distinct record marks do not overlap — overlapping pairs=0
+PASS 390 phase 2: point marks clear count labels — colliding=0
+PASS 390 phase 2: point marks clear all visible evidence text — colliding=0
+PASS 390 phase 2: visible group labels fit viewport
+PASS 390 phase 2: headline fits viewport
+PASS 390 phase 3: 422 exact persistent record IDs and winners
+PASS 390 phase 3: five court slabs
+PASS 390 phase 3: displayed grouping retains complete disjoint denominator
+PASS 390 phase 3: rendered group labels match independent oracle
+PASS 390 phase 3: all point coordinates finite — 422 coordinates
+PASS 390 phase 3: all rendered point transforms finite
+PASS 390 phase 3: finite progress
+PASS 390 phase 3: all slab transforms finite
+PASS 390 phase 3: no horizontal document overflow — 375/390
+PASS 390 phase 3: all 422 point marks inside SVG — outside=0 SVG 323×414
+PASS 390 phase 3: distinct record marks do not overlap — overlapping pairs=0
+PASS 390 phase 3: point marks clear count labels — colliding=0
+PASS 390 phase 3: point marks clear all visible evidence text — colliding=0
+PASS 390 phase 3: visible group labels fit viewport
+PASS 390 phase 3: headline fits viewport
+PASS 390 phase 4: 422 exact persistent record IDs and winners
+PASS 390 phase 4: five court slabs
+PASS 390 phase 4: displayed grouping retains complete disjoint denominator
+PASS 390 phase 4: rendered group labels match independent oracle
+PASS 390 phase 4: all point coordinates finite — 422 coordinates
+PASS 390 phase 4: all rendered point transforms finite
+PASS 390 phase 4: finite progress
+PASS 390 phase 4: all slab transforms finite
+PASS 390 phase 4: no horizontal document overflow — 375/390
+PASS 390 phase 4: all 422 point marks inside SVG — outside=0 SVG 323×414
+PASS 390 phase 4: distinct record marks do not overlap — overlapping pairs=0
+PASS 390 phase 4: point marks clear count labels — colliding=0
+PASS 390 phase 4: point marks clear all visible evidence text — colliding=0
+PASS 390 phase 4: visible group labels fit viewport
+PASS 390 phase 4: headline fits viewport
+PASS 390: all 38 set-two records remain exactly stationary during complementary split
+PASS 390 interrupted scroll: 422 exact persistent record IDs and winners
+PASS 390 interrupted scroll: five court slabs
+PASS 390 interrupted scroll: displayed grouping retains complete disjoint denominator
+PASS 390 interrupted scroll: rendered group labels match independent oracle
+PASS 390 interrupted scroll: all point coordinates finite — 422 coordinates
+PASS 390 interrupted scroll: all rendered point transforms finite
+PASS 390 interrupted scroll: finite progress
+PASS 390 interrupted scroll: all slab transforms finite
+PASS 390 interrupted scroll: no horizontal document overflow — 375/390
+PASS 390: point DOM identity survives scroll and resizing
+PASS 390: pinned record survives resize and navigation
+PASS 320 phase 0: 422 exact persistent record IDs and winners
+PASS 320 phase 0: five court slabs
+PASS 320 phase 0: displayed grouping retains complete disjoint denominator
+PASS 320 phase 0: rendered group labels match independent oracle
+PASS 320 phase 0: all point coordinates finite — 422 coordinates
+PASS 320 phase 0: all rendered point transforms finite
+PASS 320 phase 0: finite progress
+PASS 320 phase 0: all slab transforms finite
+PASS 320 phase 0: no horizontal document overflow — 305/320
+PASS 320 phase 0: all 422 point marks inside SVG — outside=0 SVG 262×414
+PASS 320 phase 0: distinct record marks do not overlap — overlapping pairs=0
+PASS 320 phase 0: point marks clear count labels — colliding=0
+PASS 320 phase 0: point marks clear all visible evidence text — colliding=0
+PASS 320 phase 0: visible group labels fit viewport
+PASS 320 phase 0: headline fits viewport
+PASS 320 phase 1: 422 exact persistent record IDs and winners
+PASS 320 phase 1: five court slabs
+PASS 320 phase 1: displayed grouping retains complete disjoint denominator
+PASS 320 phase 1: rendered group labels match independent oracle
+PASS 320 phase 1: all point coordinates finite — 422 coordinates
+PASS 320 phase 1: all rendered point transforms finite
+PASS 320 phase 1: finite progress
+PASS 320 phase 1: all slab transforms finite
+PASS 320 phase 1: no horizontal document overflow — 305/320
+PASS 320 phase 1: all 422 point marks inside SVG — outside=0 SVG 262×414
+PASS 320 phase 1: distinct record marks do not overlap — overlapping pairs=0
+PASS 320 phase 1: point marks clear count labels — colliding=0
+PASS 320 phase 1: point marks clear all visible evidence text — colliding=0
+PASS 320 phase 1: visible group labels fit viewport
+PASS 320 phase 1: headline fits viewport
+PASS 320 phase 2: 422 exact persistent record IDs and winners
+PASS 320 phase 2: five court slabs
+PASS 320 phase 2: displayed grouping retains complete disjoint denominator
+PASS 320 phase 2: rendered group labels match independent oracle
+PASS 320 phase 2: all point coordinates finite — 422 coordinates
+PASS 320 phase 2: all rendered point transforms finite
+PASS 320 phase 2: finite progress
+PASS 320 phase 2: all slab transforms finite
+PASS 320 phase 2: no horizontal document overflow — 305/320
+PASS 320 phase 2: all 422 point marks inside SVG — outside=0 SVG 262×414
+PASS 320 phase 2: distinct record marks do not overlap — overlapping pairs=0
+PASS 320 phase 2: point marks clear count labels — colliding=0
+PASS 320 phase 2: point marks clear all visible evidence text — colliding=0
+PASS 320 phase 2: visible group labels fit viewport
+PASS 320 phase 2: headline fits viewport
+PASS 320 phase 3: 422 exact persistent record IDs and winners
+PASS 320 phase 3: five court slabs
+PASS 320 phase 3: displayed grouping retains complete disjoint denominator
+PASS 320 phase 3: rendered group labels match independent oracle
+PASS 320 phase 3: all point coordinates finite — 422 coordinates
+PASS 320 phase 3: all rendered point transforms finite
+PASS 320 phase 3: finite progress
+PASS 320 phase 3: all slab transforms finite
+PASS 320 phase 3: no horizontal document overflow — 305/320
+PASS 320 phase 3: all 422 point marks inside SVG — outside=0 SVG 262×414
+PASS 320 phase 3: distinct record marks do not overlap — overlapping pairs=0
+PASS 320 phase 3: point marks clear count labels — colliding=0
+PASS 320 phase 3: point marks clear all visible evidence text — colliding=0
+PASS 320 phase 3: visible group labels fit viewport
+PASS 320 phase 3: headline fits viewport
+PASS 320 phase 4: 422 exact persistent record IDs and winners
+PASS 320 phase 4: five court slabs
+PASS 320 phase 4: displayed grouping retains complete disjoint denominator
+PASS 320 phase 4: rendered group labels match independent oracle
+PASS 320 phase 4: all point coordinates finite — 422 coordinates
+PASS 320 phase 4: all rendered point transforms finite
+PASS 320 phase 4: finite progress
+PASS 320 phase 4: all slab transforms finite
+PASS 320 phase 4: no horizontal document overflow — 305/320
+PASS 320 phase 4: all 422 point marks inside SVG — outside=0 SVG 262×414
+PASS 320 phase 4: distinct record marks do not overlap — overlapping pairs=0
+PASS 320 phase 4: point marks clear count labels — colliding=0
+PASS 320 phase 4: point marks clear all visible evidence text — colliding=0
+PASS 320 phase 4: visible group labels fit viewport
+PASS 320 phase 4: headline fits viewport
+PASS 320: all 38 set-two records remain exactly stationary during complementary split
+PASS 320 interrupted scroll: 422 exact persistent record IDs and winners
+PASS 320 interrupted scroll: five court slabs
+PASS 320 interrupted scroll: displayed grouping retains complete disjoint denominator
+PASS 320 interrupted scroll: rendered group labels match independent oracle
+PASS 320 interrupted scroll: all point coordinates finite — 422 coordinates
+PASS 320 interrupted scroll: all rendered point transforms finite
+PASS 320 interrupted scroll: finite progress
+PASS 320 interrupted scroll: all slab transforms finite
+PASS 320 interrupted scroll: no horizontal document overflow — 305/320
+PASS 320: point DOM identity survives scroll and resizing
+PASS 320: pinned record survives resize and navigation
+PASS 390×844 phase 0: 422 exact persistent record IDs and winners
+PASS 390×844 phase 0: five court slabs
+PASS 390×844 phase 0: displayed grouping retains complete disjoint denominator
+PASS 390×844 phase 0: rendered group labels match independent oracle
+PASS 390×844 phase 0: all point coordinates finite — 422 coordinates
+PASS 390×844 phase 0: all rendered point transforms finite
+PASS 390×844 phase 0: finite progress
+PASS 390×844 phase 0: all slab transforms finite
+PASS 390×844 phase 0: no horizontal document overflow — 375/390
+PASS 390×844 phase 0: all 422 point marks inside SVG — outside=0 SVG 323×388
+PASS 390×844 phase 0: distinct record marks do not overlap — overlapping pairs=0
+PASS 390×844 phase 0: point marks clear count labels — colliding=0
+PASS 390×844 phase 0: point marks clear all visible evidence text — colliding=0
+PASS 390×844 phase 0: visible group labels fit viewport
+PASS 390×844 phase 0: headline fits viewport
+PASS 390×844 phase 1: 422 exact persistent record IDs and winners
+PASS 390×844 phase 1: five court slabs
+PASS 390×844 phase 1: displayed grouping retains complete disjoint denominator
+PASS 390×844 phase 1: rendered group labels match independent oracle
+PASS 390×844 phase 1: all point coordinates finite — 422 coordinates
+PASS 390×844 phase 1: all rendered point transforms finite
+PASS 390×844 phase 1: finite progress
+PASS 390×844 phase 1: all slab transforms finite
+PASS 390×844 phase 1: no horizontal document overflow — 375/390
+PASS 390×844 phase 1: all 422 point marks inside SVG — outside=0 SVG 323×388
+PASS 390×844 phase 1: distinct record marks do not overlap — overlapping pairs=0
+PASS 390×844 phase 1: point marks clear count labels — colliding=0
+PASS 390×844 phase 1: point marks clear all visible evidence text — colliding=0
+PASS 390×844 phase 1: visible group labels fit viewport
+PASS 390×844 phase 1: headline fits viewport
+PASS 390×844 phase 2: 422 exact persistent record IDs and winners
+PASS 390×844 phase 2: five court slabs
+PASS 390×844 phase 2: displayed grouping retains complete disjoint denominator
+PASS 390×844 phase 2: rendered group labels match independent oracle
+PASS 390×844 phase 2: all point coordinates finite — 422 coordinates
+PASS 390×844 phase 2: all rendered point transforms finite
+PASS 390×844 phase 2: finite progress
+PASS 390×844 phase 2: all slab transforms finite
+PASS 390×844 phase 2: no horizontal document overflow — 375/390
+PASS 390×844 phase 2: all 422 point marks inside SVG — outside=0 SVG 323×388
+PASS 390×844 phase 2: distinct record marks do not overlap — overlapping pairs=0
+PASS 390×844 phase 2: point marks clear count labels — colliding=0
+PASS 390×844 phase 2: point marks clear all visible evidence text — colliding=0
+PASS 390×844 phase 2: visible group labels fit viewport
+PASS 390×844 phase 2: headline fits viewport
+PASS 390×844 phase 3: 422 exact persistent record IDs and winners
+PASS 390×844 phase 3: five court slabs
+PASS 390×844 phase 3: displayed grouping retains complete disjoint denominator
+PASS 390×844 phase 3: rendered group labels match independent oracle
+PASS 390×844 phase 3: all point coordinates finite — 422 coordinates
+PASS 390×844 phase 3: all rendered point transforms finite
+PASS 390×844 phase 3: finite progress
+PASS 390×844 phase 3: all slab transforms finite
+PASS 390×844 phase 3: no horizontal document overflow — 375/390
+PASS 390×844 phase 3: all 422 point marks inside SVG — outside=0 SVG 323×388
+PASS 390×844 phase 3: distinct record marks do not overlap — overlapping pairs=0
+PASS 390×844 phase 3: point marks clear count labels — colliding=0
+PASS 390×844 phase 3: point marks clear all visible evidence text — colliding=0
+PASS 390×844 phase 3: visible group labels fit viewport
+PASS 390×844 phase 3: headline fits viewport
+PASS 390×844 phase 4: 422 exact persistent record IDs and winners
+PASS 390×844 phase 4: five court slabs
+PASS 390×844 phase 4: displayed grouping retains complete disjoint denominator
+PASS 390×844 phase 4: rendered group labels match independent oracle
+PASS 390×844 phase 4: all point coordinates finite — 422 coordinates
+PASS 390×844 phase 4: all rendered point transforms finite
+PASS 390×844 phase 4: finite progress
+PASS 390×844 phase 4: all slab transforms finite
+PASS 390×844 phase 4: no horizontal document overflow — 375/390
+PASS 390×844 phase 4: all 422 point marks inside SVG — outside=0 SVG 323×388
+PASS 390×844 phase 4: distinct record marks do not overlap — overlapping pairs=0
+PASS 390×844 phase 4: point marks clear count labels — colliding=0
+PASS 390×844 phase 4: point marks clear all visible evidence text — colliding=0
+PASS 390×844 phase 4: visible group labels fit viewport
+PASS 390×844 phase 4: headline fits viewport
+PASS 390×844: set two stationary through complementary split
+PASS 320×650 phase 0: 422 exact persistent record IDs and winners
+PASS 320×650 phase 0: five court slabs
+PASS 320×650 phase 0: displayed grouping retains complete disjoint denominator
+PASS 320×650 phase 0: rendered group labels match independent oracle
+PASS 320×650 phase 0: all point coordinates finite — 422 coordinates
+PASS 320×650 phase 0: all rendered point transforms finite
+PASS 320×650 phase 0: finite progress
+PASS 320×650 phase 0: all slab transforms finite
+PASS 320×650 phase 0: no horizontal document overflow — 305/320
+PASS 320×650 phase 0: all 422 point marks inside SVG — outside=0 SVG 262×315
+PASS 320×650 phase 0: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×650 phase 0: point marks clear count labels — colliding=0
+PASS 320×650 phase 0: point marks clear all visible evidence text — colliding=0
+PASS 320×650 phase 0: visible group labels fit viewport
+PASS 320×650 phase 0: headline fits viewport
+PASS 320×650 phase 1: 422 exact persistent record IDs and winners
+PASS 320×650 phase 1: five court slabs
+PASS 320×650 phase 1: displayed grouping retains complete disjoint denominator
+PASS 320×650 phase 1: rendered group labels match independent oracle
+PASS 320×650 phase 1: all point coordinates finite — 422 coordinates
+PASS 320×650 phase 1: all rendered point transforms finite
+PASS 320×650 phase 1: finite progress
+PASS 320×650 phase 1: all slab transforms finite
+PASS 320×650 phase 1: no horizontal document overflow — 305/320
+PASS 320×650 phase 1: all 422 point marks inside SVG — outside=0 SVG 262×315
+PASS 320×650 phase 1: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×650 phase 1: point marks clear count labels — colliding=0
+PASS 320×650 phase 1: point marks clear all visible evidence text — colliding=0
+PASS 320×650 phase 1: visible group labels fit viewport
+PASS 320×650 phase 1: headline fits viewport
+PASS 320×650 phase 2: 422 exact persistent record IDs and winners
+PASS 320×650 phase 2: five court slabs
+PASS 320×650 phase 2: displayed grouping retains complete disjoint denominator
+PASS 320×650 phase 2: rendered group labels match independent oracle
+PASS 320×650 phase 2: all point coordinates finite — 422 coordinates
+PASS 320×650 phase 2: all rendered point transforms finite
+PASS 320×650 phase 2: finite progress
+PASS 320×650 phase 2: all slab transforms finite
+PASS 320×650 phase 2: no horizontal document overflow — 305/320
+PASS 320×650 phase 2: all 422 point marks inside SVG — outside=0 SVG 262×315
+PASS 320×650 phase 2: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×650 phase 2: point marks clear count labels — colliding=0
+PASS 320×650 phase 2: point marks clear all visible evidence text — colliding=0
+PASS 320×650 phase 2: visible group labels fit viewport
+PASS 320×650 phase 2: headline fits viewport
+PASS 320×650 phase 3: 422 exact persistent record IDs and winners
+PASS 320×650 phase 3: five court slabs
+PASS 320×650 phase 3: displayed grouping retains complete disjoint denominator
+PASS 320×650 phase 3: rendered group labels match independent oracle
+PASS 320×650 phase 3: all point coordinates finite — 422 coordinates
+PASS 320×650 phase 3: all rendered point transforms finite
+PASS 320×650 phase 3: finite progress
+PASS 320×650 phase 3: all slab transforms finite
+PASS 320×650 phase 3: no horizontal document overflow — 305/320
+PASS 320×650 phase 3: all 422 point marks inside SVG — outside=0 SVG 262×315
+PASS 320×650 phase 3: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×650 phase 3: point marks clear count labels — colliding=0
+PASS 320×650 phase 3: point marks clear all visible evidence text — colliding=0
+PASS 320×650 phase 3: next group title has at least 12px after tiebreak marks — 33.2px
+PASS 320×650 phase 3: visible group labels fit viewport
+PASS 320×650 phase 3: headline fits viewport
+PASS 320×650 phase 4: 422 exact persistent record IDs and winners
+PASS 320×650 phase 4: five court slabs
+PASS 320×650 phase 4: displayed grouping retains complete disjoint denominator
+PASS 320×650 phase 4: rendered group labels match independent oracle
+PASS 320×650 phase 4: all point coordinates finite — 422 coordinates
+PASS 320×650 phase 4: all rendered point transforms finite
+PASS 320×650 phase 4: finite progress
+PASS 320×650 phase 4: all slab transforms finite
+PASS 320×650 phase 4: no horizontal document overflow — 305/320
+PASS 320×650 phase 4: all 422 point marks inside SVG — outside=0 SVG 262×315
+PASS 320×650 phase 4: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×650 phase 4: point marks clear count labels — colliding=0
+PASS 320×650 phase 4: point marks clear all visible evidence text — colliding=0
+PASS 320×650 phase 4: next group title has at least 12px after tiebreak marks — 33.2px
+PASS 320×650 phase 4: visible group labels fit viewport
+PASS 320×650 phase 4: headline fits viewport
+PASS 320×650: set two stationary through complementary split
+PASS 404×590 phase 0: 422 exact persistent record IDs and winners
+PASS 404×590 phase 0: five court slabs
+PASS 404×590 phase 0: displayed grouping retains complete disjoint denominator
+PASS 404×590 phase 0: rendered group labels match independent oracle
+PASS 404×590 phase 0: all point coordinates finite — 422 coordinates
+PASS 404×590 phase 0: all rendered point transforms finite
+PASS 404×590 phase 0: finite progress
+PASS 404×590 phase 0: all slab transforms finite
+PASS 404×590 phase 0: no horizontal document overflow — 389/404
+PASS 404×590 phase 0: all 422 point marks inside SVG — outside=0 SVG 335×286
+PASS 404×590 phase 0: distinct record marks do not overlap — overlapping pairs=0
+PASS 404×590 phase 0: point marks clear count labels — colliding=0
+PASS 404×590 phase 0: point marks clear all visible evidence text — colliding=0
+PASS 404×590 phase 0: visible group labels fit viewport
+PASS 404×590 phase 0: headline fits viewport
+PASS 404×590 phase 1: 422 exact persistent record IDs and winners
+PASS 404×590 phase 1: five court slabs
+PASS 404×590 phase 1: displayed grouping retains complete disjoint denominator
+PASS 404×590 phase 1: rendered group labels match independent oracle
+PASS 404×590 phase 1: all point coordinates finite — 422 coordinates
+PASS 404×590 phase 1: all rendered point transforms finite
+PASS 404×590 phase 1: finite progress
+PASS 404×590 phase 1: all slab transforms finite
+PASS 404×590 phase 1: no horizontal document overflow — 389/404
+PASS 404×590 phase 1: all 422 point marks inside SVG — outside=0 SVG 335×286
+PASS 404×590 phase 1: distinct record marks do not overlap — overlapping pairs=0
+PASS 404×590 phase 1: point marks clear count labels — colliding=0
+PASS 404×590 phase 1: point marks clear all visible evidence text — colliding=0
+PASS 404×590 phase 1: visible group labels fit viewport
+PASS 404×590 phase 1: headline fits viewport
+PASS 404×590 phase 2: 422 exact persistent record IDs and winners
+PASS 404×590 phase 2: five court slabs
+PASS 404×590 phase 2: displayed grouping retains complete disjoint denominator
+PASS 404×590 phase 2: rendered group labels match independent oracle
+PASS 404×590 phase 2: all point coordinates finite — 422 coordinates
+PASS 404×590 phase 2: all rendered point transforms finite
+PASS 404×590 phase 2: finite progress
+PASS 404×590 phase 2: all slab transforms finite
+PASS 404×590 phase 2: no horizontal document overflow — 389/404
+PASS 404×590 phase 2: all 422 point marks inside SVG — outside=0 SVG 335×286
+PASS 404×590 phase 2: distinct record marks do not overlap — overlapping pairs=0
+PASS 404×590 phase 2: point marks clear count labels — colliding=0
+PASS 404×590 phase 2: point marks clear all visible evidence text — colliding=0
+PASS 404×590 phase 2: visible group labels fit viewport
+PASS 404×590 phase 2: headline fits viewport
+PASS 404×590 phase 3: 422 exact persistent record IDs and winners
+PASS 404×590 phase 3: five court slabs
+PASS 404×590 phase 3: displayed grouping retains complete disjoint denominator
+PASS 404×590 phase 3: rendered group labels match independent oracle
+PASS 404×590 phase 3: all point coordinates finite — 422 coordinates
+PASS 404×590 phase 3: all rendered point transforms finite
+PASS 404×590 phase 3: finite progress
+PASS 404×590 phase 3: all slab transforms finite
+PASS 404×590 phase 3: no horizontal document overflow — 389/404
+PASS 404×590 phase 3: all 422 point marks inside SVG — outside=0 SVG 335×286
+PASS 404×590 phase 3: distinct record marks do not overlap — overlapping pairs=0
+PASS 404×590 phase 3: point marks clear count labels — colliding=0
+PASS 404×590 phase 3: point marks clear all visible evidence text — colliding=0
+PASS 404×590 phase 3: next group title has at least 12px after tiebreak marks — 27.2px
+PASS 404×590 phase 3: visible group labels fit viewport
+PASS 404×590 phase 3: headline fits viewport
+PASS 404×590 phase 4: 422 exact persistent record IDs and winners
+PASS 404×590 phase 4: five court slabs
+PASS 404×590 phase 4: displayed grouping retains complete disjoint denominator
+PASS 404×590 phase 4: rendered group labels match independent oracle
+PASS 404×590 phase 4: all point coordinates finite — 422 coordinates
+PASS 404×590 phase 4: all rendered point transforms finite
+PASS 404×590 phase 4: finite progress
+PASS 404×590 phase 4: all slab transforms finite
+PASS 404×590 phase 4: no horizontal document overflow — 389/404
+PASS 404×590 phase 4: all 422 point marks inside SVG — outside=0 SVG 335×286
+PASS 404×590 phase 4: distinct record marks do not overlap — overlapping pairs=0
+PASS 404×590 phase 4: point marks clear count labels — colliding=0
+PASS 404×590 phase 4: point marks clear all visible evidence text — colliding=0
+PASS 404×590 phase 4: next group title has at least 12px after tiebreak marks — 27.2px
+PASS 404×590 phase 4: visible group labels fit viewport
+PASS 404×590 phase 4: headline fits viewport
+PASS 404×590: set two stationary through complementary split
+PASS 320×590 phase 0: 422 exact persistent record IDs and winners
+PASS 320×590 phase 0: five court slabs
+PASS 320×590 phase 0: displayed grouping retains complete disjoint denominator
+PASS 320×590 phase 0: rendered group labels match independent oracle
+PASS 320×590 phase 0: all point coordinates finite — 422 coordinates
+PASS 320×590 phase 0: all rendered point transforms finite
+PASS 320×590 phase 0: finite progress
+PASS 320×590 phase 0: all slab transforms finite
+PASS 320×590 phase 0: no horizontal document overflow — 305/320
+PASS 320×590 phase 0: all 422 point marks inside SVG — outside=0 SVG 262×286
+PASS 320×590 phase 0: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×590 phase 0: point marks clear count labels — colliding=0
+PASS 320×590 phase 0: point marks clear all visible evidence text — colliding=0
+PASS 320×590 phase 0: visible group labels fit viewport
+PASS 320×590 phase 0: headline fits viewport
+PASS 320×590 phase 1: 422 exact persistent record IDs and winners
+PASS 320×590 phase 1: five court slabs
+PASS 320×590 phase 1: displayed grouping retains complete disjoint denominator
+PASS 320×590 phase 1: rendered group labels match independent oracle
+PASS 320×590 phase 1: all point coordinates finite — 422 coordinates
+PASS 320×590 phase 1: all rendered point transforms finite
+PASS 320×590 phase 1: finite progress
+PASS 320×590 phase 1: all slab transforms finite
+PASS 320×590 phase 1: no horizontal document overflow — 305/320
+PASS 320×590 phase 1: all 422 point marks inside SVG — outside=0 SVG 262×286
+PASS 320×590 phase 1: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×590 phase 1: point marks clear count labels — colliding=0
+PASS 320×590 phase 1: point marks clear all visible evidence text — colliding=0
+PASS 320×590 phase 1: visible group labels fit viewport
+PASS 320×590 phase 1: headline fits viewport
+PASS 320×590 phase 2: 422 exact persistent record IDs and winners
+PASS 320×590 phase 2: five court slabs
+PASS 320×590 phase 2: displayed grouping retains complete disjoint denominator
+PASS 320×590 phase 2: rendered group labels match independent oracle
+PASS 320×590 phase 2: all point coordinates finite — 422 coordinates
+PASS 320×590 phase 2: all rendered point transforms finite
+PASS 320×590 phase 2: finite progress
+PASS 320×590 phase 2: all slab transforms finite
+PASS 320×590 phase 2: no horizontal document overflow — 305/320
+PASS 320×590 phase 2: all 422 point marks inside SVG — outside=0 SVG 262×286
+PASS 320×590 phase 2: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×590 phase 2: point marks clear count labels — colliding=0
+PASS 320×590 phase 2: point marks clear all visible evidence text — colliding=0
+PASS 320×590 phase 2: visible group labels fit viewport
+PASS 320×590 phase 2: headline fits viewport
+PASS 320×590 phase 3: 422 exact persistent record IDs and winners
+PASS 320×590 phase 3: five court slabs
+PASS 320×590 phase 3: displayed grouping retains complete disjoint denominator
+PASS 320×590 phase 3: rendered group labels match independent oracle
+PASS 320×590 phase 3: all point coordinates finite — 422 coordinates
+PASS 320×590 phase 3: all rendered point transforms finite
+PASS 320×590 phase 3: finite progress
+PASS 320×590 phase 3: all slab transforms finite
+PASS 320×590 phase 3: no horizontal document overflow — 305/320
+FAIL 320×590 phase 3: all 422 point marks inside SVG — outside=21 SVG 262×286
+PASS 320×590 phase 3: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×590 phase 3: point marks clear count labels — colliding=0
+PASS 320×590 phase 3: point marks clear all visible evidence text — colliding=0
+PASS 320×590 phase 3: next group title has at least 12px after tiebreak marks — 21.2px
+PASS 320×590 phase 3: visible group labels fit viewport
+PASS 320×590 phase 3: headline fits viewport
+PASS 320×590 phase 4: 422 exact persistent record IDs and winners
+PASS 320×590 phase 4: five court slabs
+PASS 320×590 phase 4: displayed grouping retains complete disjoint denominator
+PASS 320×590 phase 4: rendered group labels match independent oracle
+PASS 320×590 phase 4: all point coordinates finite — 422 coordinates
+PASS 320×590 phase 4: all rendered point transforms finite
+PASS 320×590 phase 4: finite progress
+PASS 320×590 phase 4: all slab transforms finite
+PASS 320×590 phase 4: no horizontal document overflow — 305/320
+FAIL 320×590 phase 4: all 422 point marks inside SVG — outside=21 SVG 262×286
+PASS 320×590 phase 4: distinct record marks do not overlap — overlapping pairs=0
+PASS 320×590 phase 4: point marks clear count labels — colliding=0
+PASS 320×590 phase 4: point marks clear all visible evidence text — colliding=0
+PASS 320×590 phase 4: next group title has at least 12px after tiebreak marks — 21.2px
+PASS 320×590 phase 4: visible group labels fit viewport
+PASS 320×590 phase 4: headline fits viewport
+PASS 320×590: set two stationary through complementary split
+PASS Reduced motion control reflected in diagnostics
+PASS Reduced motion phase 0: 422 exact persistent record IDs and winners
+PASS Reduced motion phase 0: five court slabs
+PASS Reduced motion phase 0: displayed grouping retains complete disjoint denominator
+PASS Reduced motion phase 0: rendered group labels match independent oracle
+PASS Reduced motion phase 0: all point coordinates finite — 422 coordinates
+PASS Reduced motion phase 0: all rendered point transforms finite
+PASS Reduced motion phase 0: finite progress
+PASS Reduced motion phase 0: all slab transforms finite
+PASS Reduced motion phase 0: no horizontal document overflow — 305/320
+PASS Reduced motion phase 3: 422 exact persistent record IDs and winners
+PASS Reduced motion phase 3: five court slabs
+PASS Reduced motion phase 3: displayed grouping retains complete disjoint denominator
+PASS Reduced motion phase 3: rendered group labels match independent oracle
+PASS Reduced motion phase 3: all point coordinates finite — 422 coordinates
+PASS Reduced motion phase 3: all rendered point transforms finite
+PASS Reduced motion phase 3: finite progress
+PASS Reduced motion phase 3: all slab transforms finite
+PASS Reduced motion phase 3: no horizontal document overflow — 305/320
+PASS Reduced motion phase 2: 422 exact persistent record IDs and winners
+PASS Reduced motion phase 2: five court slabs
+PASS Reduced motion phase 2: displayed grouping retains complete disjoint denominator
+PASS Reduced motion phase 2: rendered group labels match independent oracle
+PASS Reduced motion phase 2: all point coordinates finite — 422 coordinates
+PASS Reduced motion phase 2: all rendered point transforms finite
+PASS Reduced motion phase 2: finite progress
+PASS Reduced motion phase 2: all slab transforms finite
+PASS Reduced motion phase 2: no horizontal document overflow — 305/320
+PASS Reduced motion phase 4: 422 exact persistent record IDs and winners
+PASS Reduced motion phase 4: five court slabs
+PASS Reduced motion phase 4: displayed grouping retains complete disjoint denominator
+PASS Reduced motion phase 4: rendered group labels match independent oracle
+PASS Reduced motion phase 4: all point coordinates finite — 422 coordinates
+PASS Reduced motion phase 4: all rendered point transforms finite
+PASS Reduced motion phase 4: finite progress
+PASS Reduced motion phase 4: all slab transforms finite
+PASS Reduced motion phase 4: no horizontal document overflow — 305/320
+PASS Reduced motion creates no running Web Animations
+PASS Runtime sample collected during continuous forward scroll — 90 rAF intervals; p95 16.8 ms; max 17.4 ms. Diagnostic only; manual scroll and compositor profiling remain separate.
+
+Browser: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36
+Iframe height: 590px.
+
+752/754 checks passed. 2 failed.
+The bench verifies records and browser invariants, not aesthetic quality or uncoached fan understanding.

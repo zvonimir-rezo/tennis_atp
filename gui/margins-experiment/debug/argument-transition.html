@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Margins · argument transition</title>
+<style>body{margin:0;font:13px Arial;background:#eeeade}iframe{position:fixed;inset:0;width:100%;height:100%;border:0}aside{position:fixed;bottom:0;right:0;z-index:99;background:white;padding:8px}input{width:75px}button,input{min-height:32px;font:inherit}pre{display:none;max-height:55vh;max-width:90vw;overflow:auto;white-space:pre-wrap}body.done pre{display:block}</style>
+<iframe src="../" title="Actual Margins"></iframe><aside><form><label>Scroll progress <input id="progress" type="number" min="0" max="1" step=".001" value=".545"></label> <button>Apply</button> <button id="run" type="button">Verify argument handoff</button></form><pre id="result">Ready</pre></aside>
+<script>
+const frame=document.querySelector('iframe'),out=document.querySelector('#result'),wait=ms=>new Promise(r=>setTimeout(r,ms));
+const tick=()=>new Promise(r=>frame.contentWindow.requestAnimationFrame(()=>frame.contentWindow.requestAnimationFrame(r)));
+async function at(p){const w=frame.contentWindow,d=frame.contentDocument,section=d.querySelector('#sequence'),stage=d.querySelector('#theatre');w.scrollTo({top:w.scrollY+section.getBoundingClientRect().top+(section.offsetHeight-stage.clientHeight)*p,behavior:'instant'});await tick();return w.marginsCourtSnapshot();}
+document.querySelector('form').onsubmit=async e=>{e.preventDefault();await at(+document.querySelector('#progress').value);};
+document.querySelector('#run').onclick=async()=>{
+ document.body.classList.remove('done');const checks=[],check=(name,pass,detail)=>checks.push({name,pass,detail}),w=frame.contentWindow,d=frame.contentDocument;
+ await d.fonts.ready;const initial=[...d.querySelectorAll('.point')];
+ for(const [width,height] of [[1440,900],[390,844],[320,590]]){
+  frame.style.width=width+'px';frame.style.height=height+'px';await wait(200);
+  const end=await at(.61),target=new Map(end.positions.map(p=>[p.id,p]));
+  const error=(a,b,ids)=>Math.max(...ids.map(id=>{const x=a.find(p=>p.id===id),y=b.get(id);return Math.max(Math.abs(x.x-y.x),Math.abs(x.y-y.y));}));
+  const held=Array.from({length:38},(_,i)=>88+i),remainder=end.records.filter(r=>r.set!==2).map(r=>r.id),title=()=>d.querySelector('#chapter-title').textContent,visible=n=>w.getComputedStyle(n).visibility==='visible';
+  const pre=await at(.53);check(width+': all 38 set-two records arrive before the other four sets',error(pre.positions,target,held)<.0001&&error(pre.positions,target,remainder)>1);
+  check(width+': narrative does not announce concentration before evidence settles',!title().includes('All fourteen')&&!d.querySelector('#chapter-copy').textContent.includes('192'));
+  const anchor=await at(.545);const setLabel=d.querySelector('[data-group="set2"]');
+  const ink=elements=>elements.flatMap(el=>{const ranges=[],walker=d.createTreeWalker(el,w.NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode()){if(!node.textContent.trim())continue;const range=d.createRange();range.selectNodeContents(node);ranges.push(...range.getClientRects());}return ranges;});
+  const story=ink([d.querySelector('#chapter-title'),d.querySelector('#chapter-copy')]),legend=ink([d.querySelector('.evidence-legend')]);
+  const clearance=Math.min(...legend.map(r=>r.top))-Math.max(...story.map(r=>r.bottom));
+  check(width+': intermediate instruction clears legend by at least 12px',clearance>=12,clearance);
+  check(width+': intermediate instruction stays within the viewport',story.every(r=>r.left>=0&&r.right<=w.innerWidth&&r.top>=0));
+
+  check(width+': only the stationary set-two readout is available while the remainder travels',visible(setLabel)&&[...d.querySelectorAll('.group-label:not([data-group="set2"])')].every(n=>!visible(n)));
+  check(width+': +14 retains exact 38/422, F26/D12',setLabel.textContent.includes('38/422')&&setLabel.textContent.includes('+14')&&setLabel.querySelector('.group-counts').textContent.replace(/\s/g,'')==='F26D12');
+  const rect=d.querySelector('.court-slab[data-set="2"] .slab-top').getBoundingClientRect();
+  const foreign=[...d.querySelectorAll('.point')].filter(n=>remainder.includes(+n.dataset.id)).filter(n=>{const b=n.getBoundingClientRect();return b.left<rect.right&&b.right>rect.left&&b.top<rect.bottom&&b.bottom>rect.top;});
+  check(width+': visible +14 readout has no foreign records crossing its court section',foreign.length===0,foreign.length);
+  const late=await at(.565);check(width+': set two stays exactly held through the remainder assembly',error(late.positions,target,held)<.0001&&error(late.positions,target,remainder)>0.1);
+  let intrusion=0,earlyVisible=0;
+  for(const p of [.535,.54,.545,.55,.56,.565,.57]){await at(p);if(visible(d.querySelector('[data-group="set2"]'))){earlyVisible++;const r=d.querySelector('.court-slab[data-set="2"] .slab-top').getBoundingClientRect();intrusion+=[...d.querySelectorAll('.point')].filter(n=>remainder.includes(+n.dataset.id)).filter(n=>{const b=n.getBoundingClientRect();return b.left<r.right&&b.right>r.left&&b.top<r.bottom&&b.bottom>r.top;}).length;}}
+  check(width+': every sampled visible-anchor frame clears foreign records',earlyVisible>=4&&intrusion===0,{earlyVisible,intrusion});
+  const evidence=await at(.585);check(width+': exact equality is inspectable before the conclusion',error(evidence.positions,target,end.records.map(r=>r.id))<.0001&&!title().includes('All fourteen')&&d.querySelector('[data-group="other"] .group-counts').textContent.replace(/\s/g,'')==='F192D192'&&[...d.querySelectorAll('.group-label')].every(visible));
+  await at(.61);check(width+': concentration and 192–192 appear only at the complete arrangement',title().includes('All fourteen')&&d.querySelector('[data-group="other"] .group-counts').textContent.replace(/\s/g,'')==='F192D192'&&[...d.querySelectorAll('.group-label')].every(visible));
+  await at(.45);const reversed=await at(.545);check(width+': reverse and replay reproduce every record position',error(reversed.positions,new Map(anchor.positions.map(p=>[p.id,p])),end.records.map(r=>r.id))<.0001);
+  for(const p of [.61,.47,.58,.44,.545])await at(p);const final=w.marginsCourtSnapshot();check(width+': interrupted transitions obey the latest playhead',error(final.positions,new Map(anchor.positions.map(p=>[p.id,p])),end.records.map(r=>r.id))<.0001);
+  frame.style.width=(width-10)+'px';await wait(200);await at(.545);const resized=w.marginsCourtSnapshot(),resizedEnd=await at(.61);check(width+': resize retains an exact held set in the new composition',error(resized.positions,new Map(resizedEnd.positions.map(p=>[p.id,p])),held)<.0001);
+ }
+ check('422 original point nodes survive every handoff and resize',initial.length===422&&initial.every(n=>d.querySelector('.point[data-id="'+n.dataset.id+'"]')===n));
+ out.textContent=JSON.stringify({pass:checks.every(c=>c.pass),checks},null,2);document.body.classList.add('done');document.title=(checks.every(c=>c.pass)?'PASS':'FAIL')+' · Margins argument handoff';
+};
+</script></html>

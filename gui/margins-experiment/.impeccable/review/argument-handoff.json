@@ -1,0 +1,195 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "1440: all 38 set-two records arrive before the other four sets",
+      "pass": true
+    },
+    {
+      "name": "1440: narrative does not announce concentration before evidence settles",
+      "pass": true
+    },
+    {
+      "name": "1440: intermediate instruction clears legend by at least 12px",
+      "pass": true,
+      "detail": 37.109375
+    },
+    {
+      "name": "1440: intermediate instruction stays within the viewport",
+      "pass": true
+    },
+    {
+      "name": "1440: only the stationary set-two readout is available while the remainder travels",
+      "pass": true
+    },
+    {
+      "name": "1440: +14 retains exact 38/422, F26/D12",
+      "pass": true
+    },
+    {
+      "name": "1440: visible +14 readout has no foreign records crossing its court section",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "1440: set two stays exactly held through the remainder assembly",
+      "pass": true
+    },
+    {
+      "name": "1440: every sampled visible-anchor frame clears foreign records",
+      "pass": true,
+      "detail": {
+        "earlyVisible": 6,
+        "intrusion": 0
+      }
+    },
+    {
+      "name": "1440: exact equality is inspectable before the conclusion",
+      "pass": true
+    },
+    {
+      "name": "1440: concentration and 192–192 appear only at the complete arrangement",
+      "pass": true
+    },
+    {
+      "name": "1440: reverse and replay reproduce every record position",
+      "pass": true
+    },
+    {
+      "name": "1440: interrupted transitions obey the latest playhead",
+      "pass": true
+    },
+    {
+      "name": "1440: resize retains an exact held set in the new composition",
+      "pass": true
+    },
+    {
+      "name": "390: all 38 set-two records arrive before the other four sets",
+      "pass": true
+    },
+    {
+      "name": "390: narrative does not announce concentration before evidence settles",
+      "pass": true
+    },
+    {
+      "name": "390: intermediate instruction clears legend by at least 12px",
+      "pass": true,
+      "detail": 80.234375
+    },
+    {
+      "name": "390: intermediate instruction stays within the viewport",
+      "pass": true
+    },
+    {
+      "name": "390: only the stationary set-two readout is available while the remainder travels",
+      "pass": true
+    },
+    {
+      "name": "390: +14 retains exact 38/422, F26/D12",
+      "pass": true
+    },
+    {
+      "name": "390: visible +14 readout has no foreign records crossing its court section",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "390: set two stays exactly held through the remainder assembly",
+      "pass": true
+    },
+    {
+      "name": "390: every sampled visible-anchor frame clears foreign records",
+      "pass": true,
+      "detail": {
+        "earlyVisible": 6,
+        "intrusion": 0
+      }
+    },
+    {
+      "name": "390: exact equality is inspectable before the conclusion",
+      "pass": true
+    },
+    {
+      "name": "390: concentration and 192–192 appear only at the complete arrangement",
+      "pass": true
+    },
+    {
+      "name": "390: reverse and replay reproduce every record position",
+      "pass": true
+    },
+    {
+      "name": "390: interrupted transitions obey the latest playhead",
+      "pass": true
+    },
+    {
+      "name": "390: resize retains an exact held set in the new composition",
+      "pass": true
+    },
+    {
+      "name": "320: all 38 set-two records arrive before the other four sets",
+      "pass": true
+    },
+    {
+      "name": "320: narrative does not announce concentration before evidence settles",
+      "pass": true
+    },
+    {
+      "name": "320: intermediate instruction clears legend by at least 12px",
+      "pass": true,
+      "detail": 12.859375
+    },
+    {
+      "name": "320: intermediate instruction stays within the viewport",
+      "pass": true
+    },
+    {
+      "name": "320: only the stationary set-two readout is available while the remainder travels",
+      "pass": true
+    },
+    {
+      "name": "320: +14 retains exact 38/422, F26/D12",
+      "pass": true
+    },
+    {
+      "name": "320: visible +14 readout has no foreign records crossing its court section",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "320: set two stays exactly held through the remainder assembly",
+      "pass": true
+    },
+    {
+      "name": "320: every sampled visible-anchor frame clears foreign records",
+      "pass": true,
+      "detail": {
+        "earlyVisible": 6,
+        "intrusion": 0
+      }
+    },
+    {
+      "name": "320: exact equality is inspectable before the conclusion",
+      "pass": true
+    },
+    {
+      "name": "320: concentration and 192–192 appear only at the complete arrangement",
+      "pass": true
+    },
+    {
+      "name": "320: reverse and replay reproduce every record position",
+      "pass": true
+    },
+    {
+      "name": "320: interrupted transitions obey the latest playhead",
+      "pass": true
+    },
+    {
+      "name": "320: resize retains an exact held set in the new composition",
+      "pass": true
+    },
+    {
+      "name": "422 original point nodes survive every handoff and resize",
+      "pass": true
+    }
+  ]
+}

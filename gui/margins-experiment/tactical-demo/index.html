@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#eeeade">
+  <meta name="description" content="Take apart Djokovic's second set against Medvedev in the 2023 US Open final. Two shot patterns. Two very different results.">
+  <title>Two ways forward — Margins</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Two ways forward — Margins">
+  <meta property="og:description" content="Two shot patterns. Two very different results. Explore Djokovic’s second set against Medvedev in the 2023 US Open final.">
+  <meta property="og:type" content="article">
+  <link rel="preload" href="../assets/InstrumentSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="demo.css">
+  <noscript><style>.comparison-ledger{display:none}.sequence{height:auto}.stage{position:relative;height:auto;min-height:540px}.story{position:relative;padding-top:130px;top:auto}.start,.chapter-nav,.stage-footer,.scene{display:none}.game-tools,.point-controls,.game-filter,.raw,.moments,.game-record,.game-explanation{display:none}</style></noscript>
+  <script src="data.js" defer></script><script src="player-portraits.js" defer></script><script src="shot-sequence.js" defer></script><script src="pressure-shots.js" defer></script><script src="demo.js" defer></script><script src="comparison.js" defer></script>
+</head>
+<body>
+  <svg class="icon-definitions" width="0" height="0" aria-hidden="true"><defs><symbol id="racket-emblem" viewBox="0 0 48 64"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="20" rx="14" ry="18" stroke-width="2.5"/><path d="M18 36l4 8h4l4-8M22 44v16h4V44" stroke-width="2.5"/><path d="M17 6v28M24 2v36M31 6v28M12 12h24M10 20h28M12 28h24" stroke-width="1"/></g></symbol></defs></svg>
+  <a class="skip" href="#game">Skip to the 5–6 game</a>
+  <header class="masthead"><a class="wordmark" href="../">Margins<span>.</span></a><p>US Open final, 2023<br>Djokovic / Medvedev</p><a href="#sources">The evidence <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M6 5h13v13"/></svg></a></header>
+  <main>
+    <section class="sequence" id="sequence" aria-label="Take the second set apart">
+      <div class="stage" id="stage" data-phase="opening">
+        <div class="story">
+          <h1>Two ways<br><em>forward.</em></h1>
+          <p id="story-copy">Come in behind the serve. Or play a drop shot.<br>Two ways forward. Did both work?</p>
+          <button class="text-action start" id="start">Open the second set <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17M5 13l7 7 7-7"/></svg></button>
+        </div>
+        <div class="scene" id="scene" aria-hidden="true"><div class="floor-shadow" id="floor-shadow"></div><div class="camera" id="camera"><div class="court" id="court"></div></div></div>
+        <div class="opening-note" id="opening-note"><p>The whole second set.</p><p>One court.<br>Three groups of points.</p></div>
+        <div class="evidence" id="evidence" aria-hidden="true" inert>
+          <div class="legend"><span><i class="ball won"></i> Djokovic won</span><span><i class="ball lost"></i> Medvedev won</span><span>1 ball = 1 point</span></div>
+          <div class="groups" id="groups">
+            <button class="group" data-open="sv" aria-expanded="false"><span class="group-title">Serve &amp; volley</span><span class="count" id="count-sv"></span><span class="count-note" id="note-sv"></span><span class="group-action" id="action-sv">Open the results ↗</span></button>
+            <button class="group" data-open="drop" aria-expanded="false"><span class="group-title">Drop-shot points</span><span class="count" id="count-drop"></span><span class="count-note" id="note-drop"></span><span class="group-action" id="action-drop">Open the results ↗</span></button>
+            <button class="group" data-open="other" aria-expanded="false"><span class="group-title">The rest</span><span class="count" id="count-other"></span><span class="count-note" id="note-other"></span><span class="group-action" id="action-other">Open the results ↗</span></button>
+          </div>
+          <svg id="point-field" role="img" aria-labelledby="field-title field-desc"><title id="field-title">Second-set point outcomes</title><desc id="field-desc"></desc></svg>
+        </div>
+        <div class="comparison" id="comparison" aria-hidden="true" inert>
+          <p id="scope-question">Was he just losing drop-shot points on return?</p>
+          <div class="scope" role="group" aria-label="Test whether return points explain the contrast"><button data-scope="serve" aria-pressed="false" aria-label="Keep only Djokovic’s service points">Keep service points →</button><button data-scope="all" aria-pressed="true" aria-label="Restore all second-set points" hidden>Restore all points →</button></div>
+          <a id="pressure-link" class="text-action" href="#comparison-records" hidden>Inspect those points →</a><p id="scope-note">110 points, including 58 on Medvedev’s serve.</p><p id="scope-comparison" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <div class="stage-footer"><p id="stage-caption">An illustrated hard court. A real point record.</p><button id="motion" aria-pressed="false">Reduce motion</button></div>
+        <nav class="chapter-nav" aria-label="Court sequence"><button data-chapter="0" aria-current="step">The question</button><button data-chapter="1">The split</button><a href="#game">The 5–6 game</a></nav>
+      </div>
+    </section>
+
+    <section class="comparison-records" id="comparison-records" aria-labelledby="comparison-title">
+      <div class="comparison-intro">
+        <h2 id="comparison-title" tabindex="-1">Inside the<br><em>fractions.</em></h2>
+        <p>Follow each fraction to every point behind it. Open a row to see what happened.</p>
+        <p>Scores are <strong>before the point</strong>, in Djokovic / Medvedev order.</p>
+        <a class="text-action" href="#game">Then see set point →</a>
+      </div>
+      <div class="comparison-ledger" id="comparison-ledger">
+        <div class="ledger-patterns" role="group" aria-label="Choose the points behind a fraction"><button data-ledger-kind="drop" aria-pressed="true">His drop-shot points</button><button data-ledger-kind="sv" aria-pressed="false">Serve &amp; volley</button></div>
+        <div class="ledger-scopes" role="group" aria-label="Comparison serving scope"><button data-ledger-scope="all" aria-pressed="true" hidden>Restore return points →</button><button data-ledger-scope="serve" aria-pressed="false">Keep his service points →</button></div>
+        <p class="ledger-result" id="ledger-result" role="status" aria-atomic="true"></p>
+        <p id="ledger-definition"></p>
+        <div class="ledger-columns" aria-hidden="true"><span>Source point</span><span>Games</span><span>Points</span><span>Won by</span></div>
+        <div id="ledger-points"></div>
+        <p class="ledger-limit">These outcomes describe the points he played. Different balls, scores and choices: this is no test of what another tactic would have produced.</p>
+      </div>
+      <noscript><p>Djokovic’s service points containing his own drop shot: 84 (won), 116, 121, 143 and 154 (lost). His drop shot at 84 followed Medvedev’s. <a href="source-points.json">Inspect all 110 original records</a>.</p></noscript>
+    </section>
+
+    <section class="game" id="game" aria-labelledby="game-title">
+      <div class="game-intro"><h2 id="game-title" tabindex="-1" aria-label="Under pressure.">Under<br> <em>pressure.</em></h2><div class="rivalry-art" aria-label="Illustrated portraits of Djokovic and Medvedev">
+          <figure class="rivalry-person"><div class="portrait-piece" data-portrait="1"><img src="assets/djokovic-portrait-640.webp" srcset="assets/djokovic-portrait-640.webp 640w, assets/djokovic-portrait.webp 1254w" sizes="(max-width: 760px) 44vw, 20vw" width="1254" height="1254" alt="" loading="lazy" decoding="async"></div><figcaption>Djokovic</figcaption></figure>
+          <figure class="rivalry-person"><div class="portrait-piece" data-portrait="2"><img src="assets/medvedev-portrait-640.webp" srcset="assets/medvedev-portrait-640.webp 640w, assets/medvedev-portrait.webp 1254w" sizes="(max-width: 760px) 44vw, 20vw" width="1254" height="1254" alt="" loading="lazy" decoding="async"></div><figcaption>Medvedev</figcaption></figure>
+        </div><p>Djokovic serves at 5–6 in the second set. A fourteen-point game, including a set point to save.</p><div class="moments" role="group" aria-label="Three moments in the 5–6 game"><button data-moment="150" aria-pressed="true">Set point <span>40–AD</span></button><button data-moment="154" aria-pressed="false">Game point <span>AD–40</span></button><button data-moment="155" aria-pressed="false">The next serve <span>40–40</span></button></div><span id="point-status" class="reader-status" role="status" aria-atomic="true"></span><div class="game-explanation">        <div id="point-comment"><p id="point-type"></p><h3 id="point-outcome"></h3><p id="point-description"></p></div>
+        <button class="text-action continue-moment" id="continue-moment" hidden>And on game point? →</button>
+        <p id="game-payoff" hidden>In this game: four serve-and-volley points, four wins. Two points with his drop shot, both lost. He eventually holds for 6–6.</p>
+</div></div>
+      <div class="game-record">
+        <div class="scoreboard"><div><span>Djokovic</span><b>5</b><strong id="score-dj">40</strong></div><div><span>Medvedev</span><b>6</b><strong id="score-med">AD</strong></div><p id="score-status">Set point Medvedev · before this point</p></div>
+        <div class="game-context"><details class="whole-game"><summary>Challenge the edit: see all 14 points</summary><p class="context-note">The complete game, including two double faults. Select a point to inspect its result.</p><div class="game-tools"><p id="point-position"></p><button class="text-action" id="set-point">Back to set point →</button></div>
+          <div class="point-strip" id="point-strip" role="group" aria-label="Select a point in the 5–6 game"></div>
+          <div class="game-filter" role="group" aria-label="Highlight a shot pattern"><button data-pattern="all" aria-pressed="true">All 14 points</button><button data-pattern="sv" aria-pressed="false">Serve &amp; volley</button><button data-pattern="drop" aria-pressed="false">Drop-shot points</button></div>
+          <div class="point-controls"><button id="previous" aria-label="Previous point">← Previous</button><p id="game-pattern-note"></p><button id="next" aria-label="Next point">Next →</button></div>
+        </details></div>
+        <figure class="shot-view" id="shot-view" aria-labelledby="shot-view-title">
+          <div class="shot-view-header"><p id="shot-view-title" tabindex="-1">The recorded shots</p><button class="shot-ending" id="shot-ending">Jump to the winning volley →</button></div>
+          <div id="shot-content"><div class="shot-controls"><button id="shot-previous" aria-label="Previous shot">← Previous</button><p id="shot-position"></p><button id="shot-next">Next shot →</button></div>
+          <p class="sequence-hint" id="sequence-hint">Recorded order, not timing. Scroll or use arrow keys to inspect.</p>
+          <div class="stroke-steps" id="stroke-steps" role="group" aria-label="Recorded stroke sequence. Select a stroke to inspect it." aria-describedby="sequence-hint"></div>
+          <div class="hitter-strip" id="hitter-strip" role="group" aria-label="Recorded hitter: Djokovic" data-motion="instant">
+            <div class="hitter is-hitter" data-player="1"><img class="hitter-portrait" src="assets/djokovic-hitter.webp" width="1254" height="1254" alt="" loading="lazy" decoding="async"><div class="hitter-copy"><span class="hitter-name">Djokovic</span><span class="hitter-status"><svg class="racket-mark" viewBox="0 0 48 64" aria-hidden="true"><use href="#racket-emblem"/></svg>Hitting</span></div></div>
+            <div class="hitter" data-player="2"><img class="hitter-portrait" src="assets/medvedev-hitter.webp" width="1254" height="1254" alt="" loading="lazy" decoding="async"><div class="hitter-copy"><span class="hitter-name">Medvedev</span><span class="hitter-status" aria-hidden="true"><svg class="racket-mark" viewBox="0 0 48 64" aria-hidden="true"><use href="#racket-emblem"/></svg>Hitting</span></div></div>
+          </div>
+          <div class="court-ends" aria-hidden="true"><span>Djokovic end</span><span>Medvedev end</span></div>
+          <svg id="shot-court" viewBox="0 45 620 260" role="img" aria-labelledby="shot-court-title shot-court-desc">
+            <title id="shot-court-title"></title><desc id="shot-court-desc"></desc>
+            <rect class="shot-surface" x="64" y="61.5" width="492" height="227"/>
+            <g id="shot-regions"></g>
+            <g class="shot-lines"><rect x="64" y="61.5" width="492" height="227"/><path d="M64 90h492M64 260h492M177.5 90v170M442.5 90v170M177.5 175h265M60 175h8M552 175h8"/></g>
+            <path class="shot-net" d="M310 55v240"/>
+            <g id="shot-direction"></g>
+          </svg>
+          <div class="shot-caption" aria-live="polite" aria-atomic="true"><p id="shot-title"></p><p id="shot-detail"></p></div>
+                              <p class="shot-key">Direction bands, not bounce locations. Shading marks a service box or return-depth category. Schematic ends; no player positions or flight paths.</p>
+          <details class="shot-method"><summary>Inspect the source and court limits</summary><p class="shot-code">Source fragment <code id="shot-token"></code><span id="shot-let" hidden> · preceded by a let</span></p><p>Direction describes where a shot crossed, or would have crossed, the opponent’s baseline. A missed shot does not become an in-court landing mark. Depth is plotted only for a completed return with a documented depth code; extra digits on later strokes stay in the source fragment without becoming court coordinates.</p><p>The serve-and-volley symbol records an approach, not the player’s route. A let precedes point 154’s counted serve and is kept outside its shot sequence. <a href="https://github.com/JeffSackmann/tennis_MatchChartingProject/blob/master/MatchChart%200.3.2.xlsm">Charting instructions</a> · <a href="https://www.tennisabstract.com/blog/2015/09/23/the-match-charting-project-quick-start-guide/">Notation guide</a>.</p></details>
+          </div>
+          <div class="shot-unavailable" id="shot-unavailable" hidden>
+            <p class="unavailable-kind" id="unavailable-kind"></p><h3 id="unavailable-outcome"></h3>
+            <p id="unavailable-description"></p><p class="unavailable-note">No shot-by-shot court view for this point. Its original record stays available.</p>
+            <details class="unavailable-source"><summary>Inspect this point’s charting codes</summary><dl><div><dt>First serve and rally</dt><dd><code id="unavailable-first"></code></dd></div><div><dt>Second serve and rally</dt><dd><code id="unavailable-second"></code></dd></div></dl></details>
+          </div>
+        </figure>
+        <div class="game-audit">
+                <details class="raw"><summary>Inspect this point’s original record</summary><dl id="raw-record"></dl></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="verdict" aria-labelledby="verdict-title"><h2 id="verdict-title" tabindex="-1">A way out.<br><em>Not a rule.</em></h2><div><p>Eleven serve-and-volley points. Eleven wins. On his serve, only one of five points containing his own drop shot went his way.</p><p>The same player. The same set. Different balls and different situations. Five drop-shot points cannot tell us what another choice would have produced.</p><p>Even the one drop-shot point he won was a counter-drop, after Medvedev played one first.</p><a class="text-action" href="#comparison-records">Check the comparison <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div></section>
+
+    <section class="sources" id="sources" aria-labelledby="sources-title"><div><h2 id="sources-title" tabindex="-1">The cut.<br><em>And its limits.</em></h2><p>One second set.<br>The original records behind it.</p><a href="../">Return to the Wimbledon study</a></div><div>
+      <p>The opening comparison includes all 110 second-set points: 11 serve-and-volley points, 11 points containing Djokovic’s drop shot, and 88 other points. “Keep service points” removes the 58 points played on Medvedev’s serve. That leaves 11, five and 36 points: all 52 of Djokovic’s second-set service points.</p>
+      <p>A drop-shot point contains a charted Djokovic drop shot; the rally may continue afterward. The serve-and-volley group uses explicit charting codes. The equal court pieces name categories. Their areas and the aggregate ball positions do not encode quantities or shot locations. The three pressure-point court views separately show recorded shot categories and their exact source fragments; they are not tracking replays. The off-court portraits are generated editorial illustrations. Their fixed neutral expressions represent identity; the racket emblem identifies the recorded hitter, not a stroke pose or player position.</p>
+      <p><a href="#comparison-records">Inspect the points behind each fraction</a> · <a href="source-points.json" download>Download all 110 original-format records</a>.</p>
+      <p class="source-hash">Frozen second-set SHA-256<br><code>eb6f8cf0b7c3766f92f70424d9ec870a79a325e06360b4cba67b5444e62b1b5e</code></p>
+      <details><summary>A disagreement between sources</summary><p>Across the whole match, the MCP chart gives 19/21 serve-and-volley points won; official reporting gives 20/22. The reason for the one-event difference is unresolved. This demo stays with set two: its explicitly charted 11/11 agrees with the ATP report.</p></details>
+      <p>Data: Jeff Sackmann / Tennis Abstract Match Charting Project. Charted by Zindaras. <a href="https://www.tennisabstract.com/charting/20230910-M-US_Open-F-Novak_Djokovic-Daniil_Medvedev.html">Original match report</a> · <a href="https://www.atptour.com/en/news/djokovic-medvedev-us-open-2023-final">ATP account</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+    </div></section>
+  </main>
+  <footer><a class="wordmark" href="../">Margins<span>.</span></a><p>One set. A closer reading.</p><span>Historical study / 2026</span></footer>
+  <noscript><p class="no-js">Second-set service points: serve-and-volley 11/11 won, own drop-shot points 1/5 won, other points 25/36 won. At 5–6, Djokovic won all four serve-and-volley points and lost both drop-shot points. <a href="source-points.json">Read the original records.</a> Enable JavaScript to split the court and step through the game.</p></noscript>
+</body>
+</html>

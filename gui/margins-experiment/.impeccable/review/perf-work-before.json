@@ -1,0 +1,30 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "name": "No synchronous layout reads while the playhead moves",
+      "pass": false,
+      "detail": 315
+    },
+    {
+      "name": "Unchanged scroll-cue node survives every frame",
+      "pass": false,
+      "detail": 63
+    },
+    {
+      "name": "Held set two receives no point transform writes during cancellation",
+      "pass": false,
+      "detail": 56
+    },
+    {
+      "name": "All 422 point elements preserve object identity",
+      "pass": true,
+      "detail": 422
+    },
+    {
+      "name": "Latest reverse position wins without a timed tail",
+      "pass": true,
+      "detail": 0.5915637860082305
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "method": "Built-in image_gen; no API/CLI fallback",
+  "created": "2026-10-23",
+  "assets": [
+    {
+      "path": "djokovic-portrait.png",
+      "prompt": "Use case: illustration-story. Asset type: transparent website portrait cutout for the existing Margins historical tennis story. Style: exceptionally bold cut-paper and hand-carved linocut sports editorial illustration, recognisable facial likeness, graphic asymmetrical planes, coarse screenprint grain confined to the ink shapes, crisp silhouette, a few sweeping paper cuts. NOT a photograph or a generic smooth vector avatar. Palette: warm ivory #eeeade for lit paper, US Open blue #447e99 as a small secondary accent; two or three flat inks only. Head and upper torso with a simple unbranded tennis polo. Complete top of head and shoulders, rough intentional paper-cut chest edge, 6% transparent safety margin. Near-frontal portrait with a slight inward turn, eye-level, composed neutral expression, eyes open. Illustration represents identity, not any moment of the match. Genuine transparent background, no coloured background rectangle, no court, no racket, no ball, no text, no watermark, no logos, no celebration or emotional reaction. Large square canvas, subject fills most of it. Subject: Novak Djokovic, recognisable close-cropped dark hair, angular face, strong brows and distinctive long nose; very slight turn to viewer's right. Main ink is deep forest green #173c30. Preserve natural proportions, no caricature distortion."
+    },
+    {
+      "path": "medvedev-portrait.png",
+      "prompt": "Use case: illustration-story. Asset type: transparent website portrait cutout for the existing Margins historical tennis story. Style: exceptionally bold cut-paper and hand-carved linocut sports editorial illustration, recognisable facial likeness, graphic asymmetrical planes, coarse screenprint grain confined to the ink shapes, crisp silhouette, a few sweeping paper cuts. NOT a photograph or a generic smooth vector avatar. Palette: warm ivory #eeeade for lit paper, US Open blue #447e99 as a small secondary accent; two or three flat inks only. Head and upper torso with a simple unbranded tennis polo. Complete top of head and shoulders, rough intentional paper-cut chest edge, 6% transparent safety margin. Near-frontal portrait with a slight inward turn, eye-level, composed neutral expression, eyes open. Illustration represents identity, not any moment of the match. Genuine transparent background, no coloured background rectangle, no court, no racket, no ball, no text, no watermark, no logos, no celebration or emotional reaction. Large square canvas, subject fills most of it. Subject: Daniil Medvedev, recognisable narrow elongated face, high receding hairline, short tousled dark hair, light short beard and moustache; very slight turn to viewer's left. Main ink is dark plum #5d2945. Preserve natural proportions, no caricature distortion."
+    }
+  ],
+  "role": "Generated editorial identity illustrations, not photographs or point-event evidence. Same neutral artwork for all outcomes."
+}

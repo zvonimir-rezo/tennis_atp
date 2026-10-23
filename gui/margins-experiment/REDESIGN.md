@@ -1,0 +1,19 @@
+# Margins / The anatomy of almost
+
+Experience mode. Approved replacement world: a sculptural grass court suspended over warm ivory, raking light, deep shadows, oversized editorial typography. Continuous scroll controls the dissection; stopping holds and reversing retraces. Confirmed by the user after the grilling interview. This approval supersedes the prior ledger identity and the concept seed’s open-field assignment (seed:4baedbff50484a13). User-pinned world, metaphor and interaction win. No second direction-selection round.
+
+On this page, the 2019 final’s court becomes an object that reveals the distribution of its point advantage. Whole court → five categorical set sections → set two held apart / other four even → complementary tiebreak/rest cancellation → bounded verdict. The grass raster is authored illustrative material, the court linework is exact geometry, and only the422-record layer is evidence. Equal court sections label sets; area never encodes counts. No shot locations, simulated ball paths, psychological or counterfactual claims.
+
+Lead workflow: Impeccable replacement world, code-led because the approved object’s live geometry and reversible scroll are the design rather than a raster page comp. Taste informs composition only; its flat-surface/no-shadow/no-plum rules conflict with the explicitly approved sculptural Wimbledon world and do not apply to those pinned fields. Animate guides direct scroll playhead, spatial continuity, transform-only object motion and immediate controls. No library/dependency added.
+
+The seed challengers were boarding-pass/gateboard (identity continuity useful; interface-world fails this approved object), WPA poster (material commitment useful; flat illustration contradicts approved depth), fluid ink (physical response useful; its fluid form lacks the bounded set structure). They do not reopen the settled choice. Their useful disciplines are persistent record identity, full material commitment and direct reader control; their appearances are not borrowed.
+
+FIRST VIEWPORT: Instrument Serif large two-line title upper left; sculptural court fills lower/right stage; green turf, thin chalk lines, net rising out of the plane; ivory ground with offset soft shadow, dark green ink, plum opponent encoding. Match identity in the masthead; two exact full-match totals quiet at lower left; a plain scroll instruction. No app-style cards or dark chart dashboard.
+
+Signature: one continuous object separates in five, then camera and point groups resolve into readable arrangements. All422 point nodes persist. Set two remains held in both physical and data geometry during the last split. Inspection remains direct and immediate. System/explicit reduced motion gets static evidence and chapter navigation; no spatial travel. Phone gives the object a separate central composition and stacks the complementary groups beside held set two.
+
+Scope: disposable historical study, local only. Preserve record attribution and existing inspect/challenge functions. No betting, live feed, free camera, accounts, new model or second match. Runtime/browser evidence cannot establish fan learning or artistic appeal; independent visual critique and later uncoached observation remain separate.
+
+## 2026-10-22 evidence refinement
+
+The user requested fixes to the analytical composition and proposed tennis-ball marks. Equal SVG balls replace circle/square symbols; explicit names and F/D lanes preserve player identification. Narrative, legend, evidence and controls have separate bands. Shared group bounds align labels, balls and court surfaces. Five initial sections retain equal dimensions; subsequent pale surfaces fit the records without claiming to encode quantity. The opening material court, direct reversible playhead and bounded historical argument remain the approved direction.

@@ -1,0 +1,115 @@
+[
+  {
+    "antipattern": "italic-serif-display",
+    "name": "Italic serif display headline",
+    "description": "Oversized italic serif (Fraunces, Recoleta, Playfair, Newsreader-italic) as the primary hero headline reads as taste in isolation but has become the universal AI-startup landing page hero. Set roman, or move to a non-serif display face. Editorial / magazine register may legitimately want this — judge by context.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "italic serif h1 (instrument) at 66px \"The anatomyof almost.\""
+  },
+  {
+    "antipattern": "italic-serif-display",
+    "name": "Italic serif display headline",
+    "description": "Oversized italic serif (Fraunces, Recoleta, Playfair, Newsreader-italic) as the primary hero headline reads as taste in isolation but has become the universal AI-startup landing page hero. Set roman, or move to a non-serif display face. Editorial / magazine register may legitimately want this — judge by context.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "italic serif h2 (instrument) at 80px \"Real.Concentrated.\""
+  },
+  {
+    "antipattern": "italic-serif-display",
+    "name": "Italic serif display headline",
+    "description": "Oversized italic serif (Fraunces, Recoleta, Playfair, Newsreader-italic) as the primary hero headline reads as taste in isolation but has become the universal AI-startup landing page hero. Set roman, or move to a non-serif display face. Editorial / magazine register may legitimately want this — judge by context.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "italic serif h2 (instrument) at 64px \"Every point.Still here.\""
+  },
+  {
+    "antipattern": "italic-serif-display",
+    "name": "Italic serif display headline",
+    "description": "Oversized italic serif (Fraunces, Recoleta, Playfair, Newsreader-italic) as the primary hero headline reads as taste in isolation but has become the universal AI-startup landing page hero. Set roman, or move to a non-serif display face. Editorial / magazine register may legitimately want this — judge by context.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "italic serif h2 (instrument) at 64px \"The evidence.Its limits.\""
+  },
+  {
+    "antipattern": "cramped-padding",
+    "name": "Cramped padding",
+    "description": "Text is too close to the edge of its container. Two shapes: (1) an element with its own text where the space between the rendered text and the border box is too small for the font size, and (2) a wrapper whose children's text lands flush against a visible boundary (border, outline, or non-transparent background) with nothing to inset it. Add at least 8px (ideally 12–16px) of space inside bordered, outlined, or colored containers.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "<section> \"verdict\": children flush against bg on right/left (no inset)"
+  },
+  {
+    "antipattern": "cramped-padding",
+    "name": "Cramped padding",
+    "description": "Text is too close to the edge of its container. Two shapes: (1) an element with its own text where the space between the rendered text and the border box is too small for the font size, and (2) a wrapper whose children's text lands flush against a visible boundary (border, outline, or non-transparent background) with nothing to inset it. Add at least 8px (ideally 12–16px) of space inside bordered, outlined, or colored containers.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "<section> \"sources\": children flush against bg on right/left (no inset)"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "border-bottom rgb(181, 198, 173) on a \"Challenge the argument\" is outside DESIGN.md colors",
+    "advisory": true,
+    "ignoreValue": "rgb(181, 198, 173)"
+  },
+  {
+    "antipattern": "overused-font",
+    "name": "Overused font",
+    "description": "Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "Primary font: arial"
+  },
+  {
+    "antipattern": "cream-palette",
+    "name": "Cream / beige palette",
+    "description": "A warm cream or beige page background has become the default \"tasteful\" AI surface, reached for by reflex. Choose a background that comes from a deliberate palette, not the safe warm off-white.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "cream/beige page background rgb(238, 234, 222)"
+  },
+  {
+    "antipattern": "dark-glow",
+    "name": "Glowing shadow accents",
+    "description": "Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default \"cool\" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "Zero-offset box-shadow glow (#153c26)"
+  },
+  {
+    "antipattern": "codex-grid-background",
+    "name": "Decorative grid-line background",
+    "description": "A decorative grid or line-field background drawn with hairline linear-gradient layers tiled by a fixed pixel cell is a recurring generated-UI signature. Reserve grid overlays for actual canvas, map, blueprint, or measurement surfaces; elsewhere use product structure or a plain surface.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "/Users/zvonimirrezo/personal-projects/tennis_atp/gui/margins-experiment/index.html",
+    "line": 0,
+    "snippet": "two-axis grid-line gradient background",
+    "advisory": true
+  }
+]

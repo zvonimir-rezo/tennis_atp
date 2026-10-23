@@ -1,0 +1,335 @@
+{
+  "pass": false,
+  "results": [
+    {
+      "variant": "baseline",
+      "sha256": "8ed929ecd3661f75b2611e107656349881660677b1b00bb37062700b3d70c1a2",
+      "viewport": [
+        1152,
+        720
+      ],
+      "clientWidth": 1140,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "duration": 4000,
+      "observerDuringTiming": false,
+      "samples": 228,
+      "p95": 17.7,
+      "max": 83.1,
+      "over25ms": 10,
+      "over25percent": 4.39,
+      "paintSamples": 228,
+      "paintP95": 5.4,
+      "paintMax": 16.3,
+      "mutations": {
+        "attributes": 16545,
+        "childList": 196,
+        "pointStyle": 15362,
+        "cue": 120,
+        "nativePointTranslations": 0
+      },
+      "slowPhases": [
+        {
+          "phase": 0,
+          "n": 48,
+          "p95": 17.7
+        },
+        {
+          "phase": 1,
+          "n": 62,
+          "p95": 17.6
+        },
+        {
+          "phase": 2,
+          "n": 63,
+          "p95": 17.5
+        },
+        {
+          "phase": 3,
+          "n": 46,
+          "p95": 33.4
+        },
+        {
+          "phase": 4,
+          "n": 9,
+          "p95": 17.6
+        }
+      ],
+      "pass": false
+    },
+    {
+      "variant": "live",
+      "sha256": "4a6d008a03d496a2b026bfdf38ffba419b5fbbeb94b12b29131dbeb2c6af8890",
+      "viewport": [
+        1152,
+        720
+      ],
+      "clientWidth": 1140,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "duration": 4000,
+      "observerDuringTiming": false,
+      "samples": 240,
+      "p95": 17.6,
+      "max": 17.7,
+      "over25ms": 0,
+      "over25percent": 0,
+      "paintSamples": 239,
+      "paintP95": 2.4,
+      "paintMax": 12,
+      "mutations": {
+        "attributes": 1021,
+        "childList": 76,
+        "pointStyle": 0,
+        "cue": 0,
+        "nativePointTranslations": 0
+      },
+      "slowPhases": [
+        {
+          "phase": 0,
+          "n": 48,
+          "p95": 17.6
+        },
+        {
+          "phase": 1,
+          "n": 63,
+          "p95": 17.6
+        },
+        {
+          "phase": 2,
+          "n": 64,
+          "p95": 17.6
+        },
+        {
+          "phase": 3,
+          "n": 56,
+          "p95": 17.6
+        },
+        {
+          "phase": 4,
+          "n": 9,
+          "p95": 16.8
+        }
+      ],
+      "pass": false
+    },
+    {
+      "variant": "live",
+      "sha256": "4a6d008a03d496a2b026bfdf38ffba419b5fbbeb94b12b29131dbeb2c6af8890",
+      "viewport": [
+        1152,
+        720
+      ],
+      "clientWidth": 1140,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "duration": 4000,
+      "observerDuringTiming": false,
+      "samples": 236,
+      "p95": 17.6,
+      "max": 49.6,
+      "over25ms": 2,
+      "over25percent": 0.85,
+      "paintSamples": 235,
+      "paintP95": 1.6,
+      "paintMax": 7.4,
+      "mutations": {
+        "attributes": 1021,
+        "childList": 76,
+        "pointStyle": 0,
+        "cue": 0,
+        "nativePointTranslations": 0
+      },
+      "slowPhases": [
+        {
+          "phase": 0,
+          "n": 49,
+          "p95": 17.6
+        },
+        {
+          "phase": 1,
+          "n": 62,
+          "p95": 17.6
+        },
+        {
+          "phase": 2,
+          "n": 62,
+          "p95": 17.7
+        },
+        {
+          "phase": 3,
+          "n": 56,
+          "p95": 17.6
+        },
+        {
+          "phase": 4,
+          "n": 7,
+          "p95": 16.8
+        }
+      ],
+      "pass": true
+    },
+    {
+      "variant": "baseline",
+      "sha256": "8ed929ecd3661f75b2611e107656349881660677b1b00bb37062700b3d70c1a2",
+      "viewport": [
+        1152,
+        720
+      ],
+      "clientWidth": 1140,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "duration": 4000,
+      "observerDuringTiming": false,
+      "samples": 240,
+      "p95": 17.6,
+      "max": 34.2,
+      "over25ms": 1,
+      "over25percent": 0.42,
+      "paintSamples": 240,
+      "paintP95": 4,
+      "paintMax": 14.9,
+      "mutations": {
+        "attributes": 16575,
+        "childList": 206,
+        "pointStyle": 15286,
+        "cue": 130,
+        "nativePointTranslations": 0
+      },
+      "slowPhases": [
+        {
+          "phase": 0,
+          "n": 49,
+          "p95": 17.6
+        },
+        {
+          "phase": 1,
+          "n": 62,
+          "p95": 17.6
+        },
+        {
+          "phase": 2,
+          "n": 64,
+          "p95": 17.6
+        },
+        {
+          "phase": 3,
+          "n": 56,
+          "p95": 17.6
+        },
+        {
+          "phase": 4,
+          "n": 9,
+          "p95": 17.5
+        }
+      ],
+      "pass": false
+    },
+    {
+      "variant": "baseline",
+      "sha256": "8ed929ecd3661f75b2611e107656349881660677b1b00bb37062700b3d70c1a2",
+      "viewport": [
+        1152,
+        720
+      ],
+      "clientWidth": 1140,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "duration": 4000,
+      "observerDuringTiming": false,
+      "samples": 205,
+      "p95": 17.6,
+      "max": 383.1,
+      "over25ms": 5,
+      "over25percent": 2.44,
+      "paintSamples": 205,
+      "paintP95": 4.2,
+      "paintMax": 361,
+      "mutations": {
+        "attributes": 17382,
+        "childList": 205,
+        "pointStyle": 16130,
+        "cue": 129,
+        "nativePointTranslations": 0
+      },
+      "slowPhases": [
+        {
+          "phase": 0,
+          "n": 48,
+          "p95": 17.6
+        },
+        {
+          "phase": 1,
+          "n": 33,
+          "p95": 17.7
+        },
+        {
+          "phase": 2,
+          "n": 59,
+          "p95": 17.6
+        },
+        {
+          "phase": 3,
+          "n": 56,
+          "p95": 17.5
+        },
+        {
+          "phase": 4,
+          "n": 9,
+          "p95": 17.6
+        }
+      ],
+      "pass": false
+    },
+    {
+      "variant": "live",
+      "sha256": "4a6d008a03d496a2b026bfdf38ffba419b5fbbeb94b12b29131dbeb2c6af8890",
+      "viewport": [
+        1152,
+        720
+      ],
+      "clientWidth": 1140,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "duration": 4000,
+      "observerDuringTiming": false,
+      "samples": 232,
+      "p95": 17.6,
+      "max": 99.7,
+      "over25ms": 4,
+      "over25percent": 1.72,
+      "paintSamples": 231,
+      "paintP95": 2.4,
+      "paintMax": 5.8,
+      "mutations": {
+        "attributes": 1021,
+        "childList": 76,
+        "pointStyle": 0,
+        "cue": 0,
+        "nativePointTranslations": 0
+      },
+      "slowPhases": [
+        {
+          "phase": 0,
+          "n": 46,
+          "p95": 17.5
+        },
+        {
+          "phase": 1,
+          "n": 60,
+          "p95": 17.5
+        },
+        {
+          "phase": 2,
+          "n": 63,
+          "p95": 17.6
+        },
+        {
+          "phase": 3,
+          "n": 54,
+          "p95": 17.6
+        },
+        {
+          "phase": 4,
+          "n": 9,
+          "p95": 16.8
+        }
+      ],
+      "pass": false
+    }
+  ]
+}

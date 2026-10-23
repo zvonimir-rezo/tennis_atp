@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Margins — court verification</title>
+<style>body{font:16px/1.5 system-ui;margin:24px;background:#f1ecdf;color:#193e2b}h1{font-size:28px}button{font:inherit;padding:12px 20px;background:#193e2b;color:#fff;border:0;cursor:pointer}pre{height:400px;overflow:auto;white-space:pre-wrap;max-width:105ch;font:13px/1.5 monospace}iframe{display:block;border:1px solid #9b9c8a;background:#f1ecdf;margin-top:24px}a{color:inherit}</style></head>
+<body><h1>Margins: sculptural court verification</h1><p>This separate bench operates the actual page. Expected record identity, subset membership and scores come from the independently mapped frozen-source oracle. Court geometry is symbolic.</p><button id="run">Run browser verification</button> <a href="./">Open the experiment</a><pre id="results" aria-live="polite">Not run.</pre><iframe title="Margins verification instance" src="./" width="1440" height="900"></iframe>
+<script src="verification-oracle.js"></script><script>
+'use strict';
+const frame=document.querySelector('iframe'),output=document.querySelector('#results');let results=[];
+const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const win=()=>frame.contentWindow,doc=()=>frame.contentDocument,$=s=>doc().querySelector(s),$$=s=>[...doc().querySelectorAll(s)];
+const snapshot=()=>win().marginsCourtSnapshot();
+const evidence=()=>win().MarginsEvidence;
+const check=(name,pass,detail='')=>{results.push({name,pass:!!pass,detail});output.textContent=results.map(r=>(r.pass?'PASS ':'FAIL ')+r.name+(r.detail?' — '+r.detail:'')).join('\n');};
+const until=async predicate=>{const start=performance.now();while(!predicate()){if(performance.now()-start>7000)throw new Error('Timeout waiting for actual page readiness');await sleep(25);}};
+const click=selector=>{const node=$(selector);if(!node)throw new Error('Missing control '+selector);node.click();};
+const nextFrames=()=>new Promise(resolve=>win().requestAnimationFrame(()=>win().requestAnimationFrame(resolve)));
+const stop=async index=>{click(`[data-stop="${index}"]`);await sleep(450);await nextFrames();};
+const coordinates=s=>s.positions||s.pointPositions||[];
+const idsFor=filter=>MARGINS_ORACLE.filter(r=>filter==='all'||filter==='set2'&&r.set===2||filter==='tb'&&r.tb||filter==='rest'&&r.set!==2&&!r.tb||filter==='other'&&r.set!==2||/^set[1-5]$/.test(filter)&&r.set===Number(filter.at(-1))).map(r=>r.id);
+function invariants(label){
+ const marks=$$('.point'),state=snapshot(),positions=coordinates(state);
+ check(label+': 422 exact persistent record IDs and winners',marks.length===422&&new Set(marks.map(n=>n.dataset.id)).size===422&&marks.every(n=>Number(n.dataset.winner)===MARGINS_ORACLE[Number(n.dataset.id)-1]?.winner));
+ check(label+': five court slabs',$$('.court-slab').length===5);
+ const partition=state.groups.flatMap(g=>g.ids);
+ check(label+': displayed grouping retains complete disjoint denominator',partition.length===422&&new Set(partition).size===422&&partition.every(id=>id>=1&&id<=422));
+ check(label+': rendered group labels match independent oracle',$$('.group-label').every(node=>{const filter=node.dataset.group,ids=idsFor(filter),oracle=MARGINS_ORACLE.filter(r=>ids.includes(r.id)),f=oracle.filter(r=>r.winner===1).length,d=oracle.length-f;const margin=f-d,signed=margin>0?'+'+margin:margin<0?'−'+Math.abs(margin):'0';return node.querySelector('.group-margin').textContent===signed&&node.querySelector('.group-sample').textContent===oracle.length+'/422'+(state.phase<2?'':' points')&&node.querySelector('button').getAttribute('aria-label').endsWith(`: ${oracle.length} points, Federer ${f}, Djokovic ${d}`)&&node.querySelector('.group-counts').textContent.replace(/\s+/g,' ').trim()===`F ${f}D ${d}`;}));
+ check(label+': all point coordinates finite',positions.length===422&&positions.every(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)),positions.length+' coordinates');
+ check(label+': all rendered point transforms finite',marks.every(n=>!getComputedStyle(n).transform.includes('NaN')&&!getComputedStyle(n).transform.includes('Infinity')));
+ check(label+': finite progress',Number.isFinite(state.progress));
+ const transforms=state.slabTransforms||state.transforms;
+ if(transforms)check(label+': all slab transforms finite',JSON.stringify(transforms).match(/NaN|Infinity|null/)===null);
+ check(label+': no horizontal document overflow',doc().documentElement.scrollWidth<=win().innerWidth+1,doc().documentElement.scrollWidth+'/'+win().innerWidth);
+}
+function textRectangles(elements){
+ const rectangles=[];
+ for(const element of elements){
+  if(win().getComputedStyle(element).visibility==='hidden')continue;
+  const walker=doc().createTreeWalker(element,win().NodeFilter.SHOW_TEXT);
+  let node;
+  while(node=walker.nextNode()){
+   if(!node.textContent.trim())continue;
+   const range=doc().createRange();range.selectNodeContents(node);
+   for(const rect of range.getClientRects())if(rect.width&&rect.height)rectangles.push({text:node.textContent.trim(),rect});
+  }
+ }
+ return rectangles;
+}
+function bounds(label){
+ const svg=$('#point-ledger'),box=svg.getBoundingClientRect(),state=snapshot();
+ const visible=win().getComputedStyle(svg.parentElement).opacity!=='0';
+ const marks=$$('.point').map(n=>({node:n,box:n.getBoundingClientRect()}));
+ const outside=marks.filter(({box:r})=>r.left<box.left-.6||r.right>box.right+.6||r.top<box.top-.6||r.bottom>box.bottom+.6);
+ check(label+': all 422 point marks inside SVG',outside.length===0,'outside='+outside.length+' SVG '+Math.round(box.width)+'×'+Math.round(box.height));
+ let pointOverlaps=0;
+ if(visible)for(let a=0;a<marks.length;a++)for(let b=a+1;b<marks.length;b++){const r=marks[a].box,c=marks[b].box;if(r.left<c.right-.05&&r.right>c.left+.05&&r.top<c.bottom-.05&&r.bottom>c.top+.05)pointOverlaps++;}
+ check(label+': distinct record marks do not overlap',pointOverlaps===0,'overlapping pairs='+pointOverlaps);
+
+ const labels=$$('.group-counts').filter(n=>win().getComputedStyle(n).visibility!=='hidden').map(n=>n.getBoundingClientRect());
+ const intersections=marks.filter(({box:r})=>labels.some(c=>r.left<c.right&&r.right>c.left&&r.top<c.bottom&&r.bottom>c.top));
+ check(label+': point marks clear count labels',!intersections.length,'colliding='+intersections.length);
+ const text=textRectangles($$('.group-label button,.group-label .group-sample,.group-label .group-margin,.group-label .group-counts,.evidence-legend'));
+ const textCollisions=visible?marks.filter(({box:r})=>text.some(({rect:c})=>r.left<c.right&&r.right>c.left&&r.top<c.bottom&&r.bottom>c.top)):[];
+ check(label+': point marks clear all visible evidence text',textCollisions.length===0,'colliding='+textCollisions.length+(textCollisions.length?' first IDs '+textCollisions.slice(0,5).map(r=>r.node.dataset.id).join(','):''));
+ if(state.phase>=3&&win().innerWidth<=760&&win().innerHeight<740){
+  const tbIds=new Set(idsFor('tb')),tbBottom=Math.max(...marks.filter(r=>tbIds.has(Number(r.node.dataset.id))).map(r=>r.box.bottom));
+  const nextTitle=textRectangles($$('.group-label[data-group="rest"] button'));
+  const gap=Math.min(...nextTitle.map(r=>r.rect.top))-tbBottom;
+  check(label+': next group title has at least 12px after tiebreak marks',gap>=12,Math.round(gap*10)/10+'px');
+ }
+
+ const width=win().innerWidth,height=win().innerHeight;
+ const targets=$$('.group-label').filter(n=>win().getComputedStyle(n).visibility!=='hidden');
+ check(label+': visible group labels fit viewport',targets.every(n=>{const r=n.getBoundingClientRect();return r.left>=-1&&r.right<=width+1&&r.top>=-1&&r.bottom<=height+1;}));
+ const title=$('#chapter-title'),r=title.getBoundingClientRect();
+ if(state.phase>0&&visible){
+  const narrative=textRectangles([title,$('#chapter-copy')]),legend=textRectangles([$('.evidence-legend')]);
+  const clearance=Math.min(...legend.map(t=>t.rect.top))-Math.max(...narrative.map(t=>t.rect.bottom));
+  check(label+': headline and copy clear legend by at least 12px',clearance>=12,clearance.toFixed(1)+'px');
+  const titleText=textRectangles([title]),copyText=textRectangles([$('#chapter-copy')]);
+  check(label+': headline and explanation do not overlap',!titleText.some(a=>copyText.some(b=>a.rect.left<b.rect.right&&a.rect.right>b.rect.left&&a.rect.top<b.rect.bottom&&a.rect.bottom>b.rect.top)));
+ }
+ if(state.phase>=1&&!state.reduced){
+  const pad=width<=760?(state.phase===1?4:5):16,inset=width<=760?6:10;
+  const decks=$$('.group-label').map(node=>{const filter=node.dataset.group,set=state.phase===1?Number(filter.slice(3)):filter==='set2'?2:filter==='rest'?4:1;const a=node.getBoundingClientRect(),b=$('.court-slab[data-set="'+set+'"] .slab-top').getBoundingClientRect();return Math.max(Math.abs(b.left-(a.left-pad)),Math.abs(b.right-(a.right+pad)),Math.abs(b.top-(a.top-inset)));});
+  check(label+': court decks align with their evidence groups',decks.every(v=>v<1),Math.max(...decks).toFixed(3)+'px');
+  if(state.phase>=3&&width<=760){const upper=$('.court-slab[data-set="1"] .slab-top').getBoundingClientRect(),lower=$('.court-slab[data-set="4"] .slab-top').getBoundingClientRect();check(label+': complementary court surfaces remain separate',lower.top-upper.bottom>=8,(lower.top-upper.bottom).toFixed(1)+'px');}
+ }
+ check(label+': 422 equal tennis-ball units',marks.every(({node})=>node.tagName.toLowerCase()==='g'&&node.querySelector('.ball-body')?.getAttribute('r')==='5.5'&&node.querySelector('.ball-seam')&&node.children.length===2));
+
+ check(label+': headline fits viewport',r.left>=-1&&r.right<=width+1&&r.top>=-1&&r.bottom<=height+1);
+}
+function setInput(id){const input=$('#point-number');input.value=id;input.dispatchEvent(new (win().Event)('change',{bubbles:true}));}
+document.querySelector('#run').addEventListener('click',async()=>{
+ const run=document.querySelector('#run');run.disabled=true;results=[];output.textContent='Running…';
+ try{
+  await until(()=>typeof win().marginsCourtSnapshot==='function'&&!!evidence());await doc().fonts.ready;
+  check('No arbitrary point is highlighted on arrival',$('#point-halo').getAttribute('visibility')==='hidden');
+  const initialMarks=$$('.point');const originals=new Map(initialMarks.map(n=>[n.dataset.id,n]));
+  const records=evidence().rows;
+  check('Frozen original records: all IDs, winners, sets and tiebreak flags match independent oracle',records.length===422&&records.every((r,i)=>r.id===MARGINS_ORACLE[i].id&&r.winner===MARGINS_ORACLE[i].winner&&r.set===MARGINS_ORACLE[i].set&&r.tb===MARGINS_ORACLE[i].tb));
+  const expectedTotals={all:[422,218,204],set2:[38,26,12],tb:[33,12,21],rest:[351,180,171],other:[384,192,192],set1:[87,41,46],set3:[73,37,36],set4:[55,30,25],set5:[169,84,85]};
+  for(const [key,totals] of Object.entries(expectedTotals)){
+   const actual=evidence().stats(evidence().subsets[key]);check('Independent original-source totals '+key,JSON.stringify([actual.n,actual.f,actual.d])===JSON.stringify(totals));
+   check('Independent exact membership '+key,JSON.stringify(evidence().subsets[key].map(r=>r.id))===JSON.stringify(idsFor(key)));
+  }
+  const union=['set2','tb','rest'].flatMap(key=>evidence().subsets[key].map(r=>r.id));
+  check('Disjoint partition covers all 422 exactly once',union.length===422&&new Set(union).size===422);
+  for(const filter of ['all','set2','tb','rest']){
+   click(`[data-filter="${filter}"]`);const selected=evidence().snapshot().selected,expected=idsFor(filter);
+   check('Filter actual controls select exact IDs '+filter,JSON.stringify(selected)===JSON.stringify(expected));
+   check('Filter point marks preserve denominator '+filter,$$('.point.is-selected').length===expected.length&&$$('.point').length===422&&$('#subset-line').textContent.includes(expected.length+'/422'));
+  }
+  for(const id of [1,76,81,87,88,125,188,198,359,360,413,422]){
+   setInput(id);const expected=MARGINS_ORACLE[id-1];
+   check('Normalized pre-point score and server '+id,$('.record-score').textContent===expected.score&&$('.record-meta').textContent.includes(expected.server));
+   check('Original raw identity retained '+id,records[id-1].raw.Pt===String(id)&&$('#raw-record').textContent.includes('PtWinner'));
+  }
+  click('[data-filter="tb"]');setInput(88);check('Point outside subset restores full context',evidence().snapshot().filter==='all'&&evidence().snapshot().point===88);
+  click('[data-filter="tb"]');setInput(81);$('#record-detail').focus();$('#record-detail').dispatchEvent(new (win().KeyboardEvent)('keydown',{key:'ArrowRight',bubbles:true}));check('Keyboard steps through selected records',evidence().snapshot().point===82);
+  $('#record-detail').dispatchEvent(new (win().KeyboardEvent)('keydown',{key:'Escape',bubbles:true}));check('Escape returns focus to point input',doc().activeElement===$('#point-number'));
+  setInput(-1);check('Invalid record ID does not change selection',evidence().snapshot().point===82&&$('#point-number').value==='82');
+  click('[data-point="359"]');check('Championship point restores context and truthful callout',evidence().snapshot().filter==='all'&&evidence().snapshot().point===359&&$('#record-detail').textContent.includes('Outside the tiebreaks'));
+  for(const width of [1440,768,390,320]){
+   frame.width=width;await sleep(200);await nextFrames();
+   for(let phase=0;phase<5;phase++){await stop(phase);invariants(width+' phase '+phase);bounds(width+' phase '+phase);}
+   await stop(2);const held=snapshot().positions.filter(p=>p.id>=88&&p.id<=125);await stop(3);
+   check(width+': all 38 set-two records remain exactly stationary during complementary split',snapshot().positions.filter(p=>p.id>=88&&p.id<=125).every((p,i)=>Math.abs(p.x-held[i].x)<.01&&Math.abs(p.y-held[i].y)<.01));
+   for(const phase of [1,3,2,0,4,1]){click(`[data-stop="${phase}"]`);await sleep(35);}
+   await sleep(500);invariants(width+' interrupted scroll');
+   check(width+': point DOM identity survives scroll and resizing',$$('.point').every(n=>originals.get(n.dataset.id)===n));
+   check(width+': pinned record survives resize and navigation',evidence().snapshot().point===359);
+  }
+  for(const [width,height] of [[1909,872],[1440,720],[1024,650],[768,650],[390,844],[320,650],[404,590],[320,590]]){
+   frame.width=width;frame.height=height;await sleep(200);await nextFrames();
+   for(const phase of [0,1,2,3,4]){await stop(phase);invariants(width+'×'+height+' phase '+phase);bounds(width+'×'+height+' phase '+phase);}
+   await stop(2);const anchor=snapshot().positions.filter(p=>p.id>=88&&p.id<=125);await stop(3);
+   check(width+'×'+height+': set two stationary through complementary split',snapshot().positions.filter(p=>p.id>=88&&p.id<=125).every((p,i)=>Math.abs(p.x-anchor[i].x)<.01&&Math.abs(p.y-anchor[i].y)<.01));
+  }
+  click('#motion-setting');await nextFrames();
+  check('Reduced motion control reflected in diagnostics',snapshot().reduced===true||snapshot().reducedMotion===true);
+  for(const phase of [0,3,2,4]){await stop(phase);invariants('Reduced motion phase '+phase);}
+  check('Reduced motion creates no running Web Animations',doc().getAnimations().every(a=>a.playState!=='running'));
+  click('#motion-setting');await stop(0);
+  let intervals=[],last;const start=performance.now(),section=$('#sequence'),stage=$('.theatre'),scrollStart=win().scrollY+section.getBoundingClientRect().top,travel=section.offsetHeight-stage.clientHeight;await new Promise(resolve=>{function sample(t){if(last!==undefined)intervals.push(t-last);last=t;const fraction=Math.min(1,(performance.now()-start)/1500);win().scrollTo({top:scrollStart+travel*fraction,behavior:'instant'});if(fraction<1)win().requestAnimationFrame(sample);else resolve();}win().requestAnimationFrame(sample);});
+  const ordered=intervals.slice().sort((a,b)=>a-b),p95=ordered[Math.floor(ordered.length*.95)];
+  check('Runtime sample collected during continuous forward scroll',intervals.length>10,`${intervals.length} rAF intervals; p95 ${p95?.toFixed(1)} ms; max ${Math.max(...intervals).toFixed(1)} ms. Diagnostic only; manual scroll and compositor profiling remain separate.`);
+  const failures=results.filter(r=>!r.pass).length;output.textContent+='\n\nBrowser: '+navigator.userAgent+'\nIframe height: '+frame.height+'px.';output.textContent+=`\n\n${results.length-failures}/${results.length} checks passed. ${failures} failed.\nThe bench verifies records and browser invariants, not aesthetic quality or uncoached fan understanding.`;
+ }catch(error){check('Verification completed',false,error.stack||error.message);}finally{run.disabled=false;}
+});
+</script></body></html>

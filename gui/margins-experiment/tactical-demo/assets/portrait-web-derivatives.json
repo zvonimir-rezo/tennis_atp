@@ -1,0 +1,33 @@
+{
+  "purpose": "Transport and display-size encoding only. Original generated portraits and their provenance remain unchanged.",
+  "derivatives": [
+    {
+      "file": "djokovic-portrait.webp",
+      "source": "djokovic-portrait.png",
+      "method": "cwebp -lossless -q 100 -m 6; pixel-identical RGBA",
+      "sha256": "4258c7ece59b7ea98315a88be78eec4fac266378573483aa193bf980d64d3c3f",
+      "bytes": 1184450
+    },
+    {
+      "file": "djokovic-hitter.webp",
+      "source": "djokovic-portrait.png",
+      "method": "cwebp -resize 140 0 -q 90; display-size derivative",
+      "sha256": "d582544400981a899126136d7bfd80a7b22775601217bd3ecf27126171992afb",
+      "bytes": 7444
+    },
+    {
+      "file": "medvedev-portrait.webp",
+      "source": "medvedev-portrait.png",
+      "method": "cwebp -lossless -q 100 -m 6; pixel-identical RGBA",
+      "sha256": "ffc11f13d02d580b05aa78af46e6725d1773b2589a5be51ae8bdf0a613aea3c4",
+      "bytes": 1181430
+    },
+    {
+      "file": "medvedev-hitter.webp",
+      "source": "medvedev-portrait.png",
+      "method": "cwebp -resize 140 0 -q 90; display-size derivative",
+      "sha256": "d356cda318b39ed48de42ecc02a8f974d92359c0e00f55712487baa2acc1b4d7",
+      "bytes": 7184
+    }
+  ]
+}

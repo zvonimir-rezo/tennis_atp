@@ -1,0 +1,78 @@
+{
+  "variant": "no-marks",
+  "viewport": [
+    1152,
+    720
+  ],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "samples": 359,
+  "p95": 17.6,
+  "max": 33.3,
+  "over25ms": 1,
+  "over25percent": 0.28,
+  "paintP95": 2.8,
+  "paintMax": 10.2,
+  "partsP95": [
+    {
+      "name": "playheadChapter",
+      "p95": 0.3,
+      "sum": 39.9
+    },
+    {
+      "name": "geometryReads",
+      "p95": 0.2,
+      "sum": 36.3
+    },
+    {
+      "name": "courtWrites",
+      "p95": 1,
+      "sum": 123
+    },
+    {
+      "name": "marks",
+      "p95": 0.9,
+      "sum": 100.9
+    },
+    {
+      "name": "labelsCueHalo",
+      "p95": 1.1,
+      "sum": 153.1
+    }
+  ],
+  "mutations": {
+    "attributes": 3363,
+    "childList": 435,
+    "pointTransforms": 0,
+    "cue": 359
+  },
+  "loafSupported": true,
+  "loafs": [],
+  "slowPhases": [
+    {
+      "phase": 0,
+      "n": 72,
+      "p95": 17.5
+    },
+    {
+      "phase": 1,
+      "n": 92,
+      "p95": 17.5
+    },
+    {
+      "phase": 2,
+      "n": 98,
+      "p95": 17.6
+    },
+    {
+      "phase": 3,
+      "n": 82,
+      "p95": 17.6
+    },
+    {
+      "phase": 4,
+      "n": 15,
+      "p95": 17.6
+    }
+  ],
+  "pass": false
+}

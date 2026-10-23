@@ -1,0 +1,54 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "No synchronous layout reads while the playhead moves",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Unchanged scroll-cue node survives every frame",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Held set two receives no point transform writes during cancellation",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "All 422 point elements preserve object identity",
+      "pass": true,
+      "detail": 422
+    },
+    {
+      "name": "Latest reverse position wins without a timed tail",
+      "pass": true,
+      "detail": 0.6000000125586741
+    },
+    {
+      "name": "1440×900: native matrices match every record through intermediate/reverse positions",
+      "pass": true,
+      "detail": {
+        "tolerance": 0.0001,
+        "maxError": 0.00006094675609347178
+      }
+    },
+    {
+      "name": "390×844: native matrices match every record through intermediate/reverse positions",
+      "pass": true,
+      "detail": {
+        "tolerance": 0.0001,
+        "maxError": 0.000015217504710562935
+      }
+    },
+    {
+      "name": "320×590: native matrices match every record through intermediate/reverse positions",
+      "pass": true,
+      "detail": {
+        "tolerance": 0.0001,
+        "maxError": 0.00001464843751364242
+      }
+    }
+  ]
+}

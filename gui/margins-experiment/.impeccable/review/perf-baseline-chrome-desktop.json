@@ -1,0 +1,51 @@
+{
+  "variant": "live",
+  "viewport": [
+    1152,
+    720
+  ],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "samples": 359,
+  "p95": 17.4,
+  "max": 33.4,
+  "over25ms": 1,
+  "over25percent": 0.28,
+  "paintP95": 3.8,
+  "paintMax": 9.8,
+  "mutations": {
+    "attributes": 44120,
+    "childList": 435,
+    "pointTransforms": 40742,
+    "cue": 359
+  },
+  "loafSupported": true,
+  "loafs": [],
+  "slowPhases": [
+    {
+      "phase": 0,
+      "n": 72,
+      "p95": 17.2
+    },
+    {
+      "phase": 1,
+      "n": 93,
+      "p95": 17
+    },
+    {
+      "phase": 2,
+      "n": 97,
+      "p95": 17.5
+    },
+    {
+      "phase": 3,
+      "n": 82,
+      "p95": 17.1
+    },
+    {
+      "phase": 4,
+      "n": 15,
+      "p95": 17.4
+    }
+  ],
+  "pass": true
+}

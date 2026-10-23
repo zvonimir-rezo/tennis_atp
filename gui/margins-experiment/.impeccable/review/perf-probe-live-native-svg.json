@@ -1,0 +1,51 @@
+{
+  "variant": "live-svg",
+  "viewport": [
+    1152,
+    720
+  ],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "samples": 347,
+  "p95": 17.7,
+  "max": 150,
+  "over25ms": 5,
+  "over25percent": 1.44,
+  "paintP95": 1.8,
+  "paintMax": 23.3,
+  "mutations": {
+    "attributes": 2526,
+    "childList": 76,
+    "pointTransforms": 0,
+    "cue": 0
+  },
+  "loafSupported": true,
+  "loafs": [],
+  "slowPhases": [
+    {
+      "phase": 0,
+      "n": 74,
+      "p95": 17.7
+    },
+    {
+      "phase": 1,
+      "n": 92,
+      "p95": 17.7
+    },
+    {
+      "phase": 2,
+      "n": 94,
+      "p95": 17.7
+    },
+    {
+      "phase": 3,
+      "n": 72,
+      "p95": 17.7
+    },
+    {
+      "phase": 4,
+      "n": 15,
+      "p95": 17.6
+    }
+  ],
+  "pass": true
+}

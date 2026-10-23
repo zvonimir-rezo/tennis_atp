@@ -1,0 +1,63 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "variant": "live",
+      "sha256": "57156e58f28b39d000d4c13e0e6d45b3f33169240a86484aa4fa4926039359b5",
+      "viewport": [
+        1440,
+        900
+      ],
+      "clientWidth": 1440,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "duration": 4000,
+      "observerDuringTiming": false,
+      "samples": 241,
+      "p95": 18.6,
+      "max": 18.7,
+      "over25ms": 0,
+      "over25percent": 0,
+      "paintSamples": 240,
+      "paintP95": 0.5,
+      "paintMax": 1.4,
+      "mutations": {
+        "attributes": 947,
+        "childList": 76,
+        "pointStyle": 0,
+        "cue": 0,
+        "nativePointTranslations": 16120
+      },
+      "slowPhases": [
+        {
+          "phase": 0,
+          "n": 49,
+          "p95": 18.6
+        },
+        {
+          "phase": 1,
+          "n": 63,
+          "p95": 17.9
+        },
+        {
+          "phase": 2,
+          "n": 64,
+          "p95": 18.5
+        },
+        {
+          "phase": 3,
+          "n": 56,
+          "p95": 18.5
+        },
+        {
+          "phase": 4,
+          "n": 9,
+          "p95": 17.5
+        }
+      ],
+      "enoughSamples": true,
+      "frameBudgetMet": true,
+      "callbackHeadroomMet": true,
+      "pass": true
+    }
+  ]
+}
